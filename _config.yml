@@ -1,0 +1,49 @@
+title: BIM Agent Privacy Red-Teaming
+description: A research showcase on role-based privacy boundaries and adversarial evaluation of BIM agents in collaborative design.
+lang: en
+url: "https://zachary-wzp.github.io"
+baseurl: /bim-agent-privacy-website
+timezone: Asia/Shanghai
+markdown: kramdown
+strict_front_matter: true
+liquid:
+  error_mode: strict
+collections:
+  cases:
+    output: true
+    permalink: /cases/:name/
+  updates:
+    output: true
+    permalink: /progress/updates/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: cases
+    values:
+      layout: case
+      published: false
+      approved_for_publication: false
+      render_with_liquid: false
+  - scope:
+      path: ""
+      type: updates
+    values:
+      layout: update
+      published: false
+      render_with_liquid: false
+exclude:
+  - README.md
+  - BIM_Agent_Privacy_Showcase_Codex_Execution_Plan_v1.0.md
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - scripts
+  - tests
+  - vendor
+  - node_modules
+  - .qa
+  - .github

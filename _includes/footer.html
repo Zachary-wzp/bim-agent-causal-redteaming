@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>BIM Agent Privacy Red-Teaming</strong><p>A research showcase for privacy in collaborative design.</p><p class="small">For research and documentation. No live agent execution.</p></div>
+    <div class="footer-links"><a href="{{ '/resources/' | relative_url }}">Research resources ↗</a>
+    {% if site.data.platform.github_url and site.data.platform.github_url != '' %}<a href="{{ site.data.platform.github_url | escape }}" rel="noopener noreferrer">BIM Agent on GitHub ↗</a>{% endif %}
+    {% for resource in site.data.resources.items %}{% if resource.status == 'published' and resource.url != '' %}<a href="{{ resource.url | escape }}" rel="noopener noreferrer">{{ resource.title | escape }} ↗</a>{% endif %}{% endfor %}
+    <span class="small">Only reviewed, approved materials are published.</span></div>
+  </div>
+</footer>

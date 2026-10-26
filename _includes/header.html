@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="BIM Privacy Research home"><span class="brand-symbol" aria-hidden="true">B<span>+</span></span><span>BIM <strong>Privacy Research</strong></span></a>
+    <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <nav id="primary-navigation" class="primary-nav" aria-label="Main navigation">
+      {% for item in site.data.navigation %}
+      {% assign active = false %}{% if page.url == item.url %}{% assign active = true %}{% elsif item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
+      <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,59 @@
+name: Validate, build and deploy research showcase
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - name: Validate public content
+        run: bundle exec ruby scripts/validate_content.rb
+      - name: Test publication safeguards
+        run: bundle exec ruby tests/content_validation_test.rb
+      - name: Test Markdown output and protected-fact rendering
+        run: bundle exec ruby tests/output_rendering_test.rb
+      - name: Test isolated content rendering and build gates
+        run: bundle exec ruby tests/integration_test.rb
+      - name: Build production website
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      - name: Check generated routes and assets
+        run: python3 scripts/check_site.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    # The researcher enables this repository variable only after approving release.
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.PAGES_DEPLOYMENT_APPROVED == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy approved artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

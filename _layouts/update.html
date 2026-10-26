@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% if page.published == true %}
+<a class="back-link" href="{{ '/progress/' | relative_url }}">← Progress history</a>
+<header class="page-heading"><p class="eyebrow">RESEARCH SNAPSHOT / <time datetime="{{ page.snapshot_date }}">As of {{ page.snapshot_date }}</time></p><h1>{{ page.title | escape }}</h1><p class="lead">{{ page.summary | escape }}</p></header>
+<p class="notice">A historical research snapshot as of {{ page.snapshot_date }}. Subsequent developments are recorded in later updates.</p>
+<section class="section"><h2>Achievements</h2><ul>{% for achievement in page.achievements %}<li>{{ achievement | escape }}</li>{% endfor %}</ul></section>
+<section class="section"><h2>Related milestones</h2><ul>{% for id in page.milestone_ids %}{% assign milestone = site.data.milestones.items | where: 'id', id | first %}<li><a href="{{ '/progress/' | relative_url }}#{{ id | escape }}">{{ milestone.title | escape }}</a></li>{% endfor %}</ul></section>
+<section class="section"><h2>Supporting evidence</h2>{% include evidence-links.html links=page.evidence %}</section>
+<section class="section"><h2>Next steps</h2>{% if page.next_steps.size > 0 %}<ul>{% for step in page.next_steps %}<li>{{ step | escape }}</li>{% endfor %}</ul>{% else %}<p>No further steps recorded in this snapshot.</p>{% endif %}</section>
+{% if content != '' %}<section class="section prose"><h2>Snapshot notes</h2>{{ content }}</section>{% endif %}
+{% if page.corrections.size > 0 %}<section class="section"><h2>Correction notes</h2>{% for correction in page.corrections %}<div class="correction"><time datetime="{{ correction.date }}">{{ correction.date }}</time><p>{{ correction.note | escape }}</p></div>{% endfor %}</section>{% endif %}
+<a class="back-link" href="{{ '/progress/' | relative_url }}">← Back to Project Progress</a>
+{% endif %}

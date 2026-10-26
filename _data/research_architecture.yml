@@ -1,0 +1,24 @@
+# Website research design supplied by the user. Kept separate from platform.yml.
+# No specific role-to-agent permission matrix or implementation status is implied.
+title: Multi-agent system
+number: 01 / ARCHITECTURE
+user_label: User
+user_detail: Role + question
+coordinator_label: Coordinator Agent
+coordinator_detail: Route by role · Combine responses
+specialists_label: Role-selected specialist agents
+caption: The coordinator calls the relevant specialist agents according to the user's role, then combines their responses into an answer.
+status: Research architecture · Design schematic
+agents:
+  - id: arc
+    label: ARC Agent
+    discipline: Architecture
+  - id: str
+    label: STR Agent
+    discipline: Structure
+  - id: mep
+    label: MEP Agent
+    discipline: Mechanical, electrical & plumbing
+  - id: cost
+    label: COST Agent
+    discipline: Cost

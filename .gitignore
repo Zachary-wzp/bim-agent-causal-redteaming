@@ -1,0 +1,15 @@
+/_site/
+/.jekyll-cache/
+/.jekyll-metadata
+/.sass-cache/
+/.bundle/
+/vendor/
+/node_modules/
+/.qa/
+*.log
+.DS_Store
+.env
+.env.*
+
+# Local execution instructions are not website source or public research content.
+/BIM_Agent_Privacy_Showcase_Codex_Execution_Plan_v1.0.md

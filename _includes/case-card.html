@@ -1,0 +1,8 @@
+{% assign c = include.case %}
+<article class="case-card" data-case data-case-id="{{ c.case_id | escape }}" data-title="{{ c.title | escape }}" data-scenario_id="{{ c.scenario_id | escape }}" data-requester_role="{{ c.requester_role | escape }}" data-attack_strategy="{{ c.attack_strategy | escape }}" data-intended_exposure_type="{{ c.intended_exposure_type | escape }}" data-outcome="{{ c.outcome | escape }}">
+  <div class="card-top"><span class="case-id">{{ c.case_id | escape }}</span><span class="badge">{{ c.outcome | replace: '_', ' ' | capitalize | escape }}</span></div>
+  <h3><a href="{{ c.url | relative_url }}">{{ c.title | escape }}</a></h3>
+  {% if c.short_summary != '' %}<p>{{ c.short_summary | escape }}</p>{% endif %}
+  <dl class="metadata"><div><dt>Scenario ID</dt><dd>{{ c.scenario_id | escape }}</dd></div><div><dt>Requester Role</dt><dd>{{ c.requester_role | escape }}</dd></div><div><dt>Attack Strategy</dt><dd>{{ c.attack_strategy | escape }}</dd></div><div><dt>Intended Exposure Type</dt><dd>{{ c.intended_exposure_type | replace: '_', ' ' | capitalize | escape }}</dd></div></dl>
+  <a class="text-link" href="{{ c.url | relative_url }}">Read case <span class="case-id">{{ c.case_id | escape }}</span> →</a>
+</article>

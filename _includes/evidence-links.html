@@ -1,0 +1,1 @@
+<ul>{% for link in include.links %}{% assign first_character = link.url | slice: 0, 1 %}<li><a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url | escape }}{% endif %}"{% unless first_character == '/' %} rel="noopener noreferrer"{% endunless %}>{{ link.title | escape }}</a></li>{% endfor %}</ul>

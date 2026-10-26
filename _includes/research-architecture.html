@@ -1,0 +1,39 @@
+{% assign architecture = site.data.research_architecture %}
+<figure class="research-architecture" aria-labelledby="research-architecture-title" aria-describedby="research-architecture-caption">
+  <div class="architecture-heading"><span id="research-architecture-title">{{ architecture.title | escape }}</span><span>{{ architecture.number | escape }}</span></div>
+  <div class="architecture-user architecture-node">
+    <svg class="architecture-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="10" r="5"/><path d="M6 28v-4a10 10 0 0 1 20 0v4"/></svg>
+    <div><strong>{{ architecture.user_label | escape }}</strong><span>{{ architecture.user_detail | escape }}</span></div>
+  </div>
+  <div class="architecture-exchange">
+    <span class="architecture-flow"><i aria-hidden="true"></i>Request</span>
+    <span class="architecture-flow architecture-return"><i aria-hidden="true"></i>Answer</span>
+  </div>
+  <div class="architecture-coordinator architecture-node">
+    <svg class="architecture-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 5v8M6 22v-5h20v5M16 17v5"/><rect x="12" y="1" width="8" height="8" rx="2"/><rect x="2" y="22" width="8" height="8" rx="2"/><rect x="12" y="22" width="8" height="8" rx="2"/><rect x="22" y="22" width="8" height="8" rx="2"/></svg>
+    <div><strong>{{ architecture.coordinator_label | escape }}</strong><span>{{ architecture.coordinator_detail | escape }}</span></div>
+  </div>
+  <div class="architecture-exchange">
+    <span class="architecture-flow"><i aria-hidden="true"></i>Delegation</span>
+    <span class="architecture-flow architecture-return"><i aria-hidden="true"></i>Results</span>
+  </div>
+  <div class="architecture-specialists">
+    <p class="architecture-group-label">{{ architecture.specialists_label | escape }}</p>
+    <ul class="architecture-agents">
+      {% for agent in architecture.agents %}
+      <li class="architecture-agent architecture-{{ agent.id | escape }}">
+        <svg class="architecture-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          {% case agent.id %}
+          {% when 'arc' %}<path d="M5 29V9l14-6v26M19 13h8v16M2 29h28M10 11v3m4-5v3m-4 6v3m4-6v3m-4 6v5m13-12v3m0 3v3"/>
+          {% when 'str' %}<path d="M4 28V4h24v24M4 16h24M4 28h24M4 4l24 24M28 4 4 28M16 4v24"/><circle cx="4" cy="4" r="2"/><circle cx="28" cy="4" r="2"/><circle cx="4" cy="28" r="2"/><circle cx="28" cy="28" r="2"/>
+          {% when 'mep' %}<path d="M3 7h9v8h8v10h9M3 12h4v8h8v10M12 3v4M20 15h9M24 22v6M3 5v4M27 13v4"/><circle cx="20" cy="15" r="3"/>
+          {% when 'cost' %}<rect x="6" y="2" width="20" height="28" rx="3"/><path d="M10 7h12v5H10zM10 17h2m4 0h2m4 0h0M10 22h2m4 0h2m4 0h0M10 26h2m4 0h2m4 0h0"/>
+          {% endcase %}
+        </svg>
+        <strong>{{ agent.label | escape }}</strong><span>{{ agent.discipline | escape }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <figcaption id="research-architecture-caption"><p>{{ architecture.caption | escape }}</p><span>{{ architecture.status | escape }}</span></figcaption>
+</figure>

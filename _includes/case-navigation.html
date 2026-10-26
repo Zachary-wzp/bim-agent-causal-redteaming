@@ -1,0 +1,28 @@
+{%- assign navigation_cases = site.cases | where: 'published', true | where: 'approved_for_publication', true | sort: 'case_id' -%}
+{%- assign current_case_index = nil -%}
+{%- for navigation_case in navigation_cases -%}
+  {%- if navigation_case.url == page.url -%}
+    {%- assign current_case_index = forloop.index0 -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if current_case_index != nil and navigation_cases.size > 1 -%}
+  {%- assign last_case_index = navigation_cases.size | minus: 1 -%}
+  <nav class="case-navigation" aria-label="Case navigation at {{ include.position | escape }}">
+    {% if current_case_index > 0 %}
+      {% assign previous_case_index = current_case_index | minus: 1 %}
+      {% assign previous_case = navigation_cases[previous_case_index] %}
+      <a class="case-navigation-link" rel="prev" href="{{ previous_case.url | relative_url }}"><span>← Previous case</span><strong>{{ previous_case.case_id | escape }}</strong></a>
+    {% else %}
+      <span class="case-navigation-link is-disabled" aria-disabled="true"><span>← Previous case</span><strong>First case</strong></span>
+    {% endif %}
+    <span class="case-navigation-position">Case {{ current_case_index | plus: 1 }} of {{ navigation_cases.size }}</span>
+    {% if current_case_index < last_case_index %}
+      {% assign next_case_index = current_case_index | plus: 1 %}
+      {% assign next_case = navigation_cases[next_case_index] %}
+      <a class="case-navigation-link case-navigation-next" rel="next" href="{{ next_case.url | relative_url }}"><span>Next case →</span><strong>{{ next_case.case_id | escape }}</strong></a>
+    {% else %}
+      <span class="case-navigation-link case-navigation-next is-disabled" aria-disabled="true"><span>Next case →</span><strong>Last case</strong></span>
+    {% endif %}
+  </nav>
+{%- endif -%}
