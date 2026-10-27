@@ -1,7 +1,7 @@
 # Content maintenance guide
 
 Current repository (renamed on 2026-10-27):
-[Zachary-wzp/bim-agent-sensitive-information](https://github.com/Zachary-wzp/bim-agent-sensitive-information).
+[Zachary-wzp/bim-agent-causal-redteaming](https://github.com/Zachary-wzp/bim-agent-causal-redteaming).
 
 界面内容以英文填写。这里的模板只说明字段，**不是实验记录**。仅加入用户已授权
 展示的材料，不要擅自导入其他记录。当前 16 个案例已获用户授权展示：
@@ -371,3 +371,16 @@ setup and release instructions are in [DEVELOPMENT](DEVELOPMENT.md).
   repository; `docs/` is excluded from the generated website.
 - Use relative paths for repository documents and images, and the full public
   website URL for website routes. Check links after moving documentation.
+
+## 10. Project identity
+
+The full project title is stored in `_config.yml` as `title`. The homepage heading,
+header, footer, document titles and Open Graph metadata all use that field. Keep
+the README heading and repository description synchronized with it. The current
+title is:
+
+> Uncovering Sensitive Information Exposure Mechanisms in Agentic LLM-Assisted BIM Design Collaboration through Causal Red-Teaming
+
+The repository and Pages project prefix are `bim-agent-causal-redteaming`. After
+changing the title, check the header, hero and footer on desktop and mobile, then
+refresh the README homepage screenshot in `docs/images/website-preview.png`.

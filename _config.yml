@@ -1,8 +1,8 @@
-title: BIM Agent Privacy Red-Teaming
-description: A research showcase on role-based privacy boundaries and adversarial evaluation of BIM agents in collaborative design.
+title: Uncovering Sensitive Information Exposure Mechanisms in Agentic LLM-Assisted BIM Design Collaboration through Causal Red-Teaming
+description: Investigating sensitive information exposure mechanisms in agentic LLM-assisted BIM design collaboration through causal red-teaming.
 lang: en
 url: "https://zachary-wzp.github.io"
-baseurl: /bim-agent-sensitive-information
+baseurl: /bim-agent-causal-redteaming
 timezone: Asia/Shanghai
 markdown: kramdown
 strict_front_matter: true

@@ -60,6 +60,6 @@ def check(root, base):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('root', nargs='?', default='_site')
-    parser.add_argument('--baseurl', default='/bim-agent-sensitive-information')
+    parser.add_argument('--baseurl', default='/bim-agent-causal-redteaming')
     args = parser.parse_args()
     check(Path(args.root).resolve(), args.baseurl.rstrip('/'))

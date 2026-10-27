@@ -1,7 +1,7 @@
 # Publication checklist
 
 Current repository (renamed on 2026-10-27):
-[Zachary-wzp/bim-agent-sensitive-information](https://github.com/Zachary-wzp/bim-agent-sensitive-information).
+[Zachary-wzp/bim-agent-causal-redteaming](https://github.com/Zachary-wzp/bim-agent-causal-redteaming).
 
 用户于 2026-10-26 指定 Zachary-wzp/bim-agent-privacy-website 并授权发布当前网站。
 范围包括六个页面、现有 16 个案例和研究设计示意图。案例保留完整原文、不脱敏、

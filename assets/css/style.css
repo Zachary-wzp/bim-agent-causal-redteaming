@@ -64,3 +64,16 @@
 .research-design-copy>p.small{font-size:.8rem}
 .research-design-copy h2{max-width:420px}
 @media(max-width:1000px){.research-design{grid-template-columns:1fr;gap:28px}}
+
+/* Keep the complete research title readable across page sizes. */
+.brand{flex:1;min-width:0;white-space:normal;max-width:520px;line-height:1.45}
+.brand-symbol{flex:0 0 38px}
+.brand-title{font-size:.76rem;overflow-wrap:break-word}
+.primary-nav{flex-shrink:0}
+.hero-copy{max-width:1080px}
+.hero h1{font-size:clamp(1.9rem,3.5vw,3.15rem);line-height:1.17;text-wrap:balance;overflow-wrap:break-word}
+.footer-project{flex:1;min-width:0;max-width:720px}
+.footer-project strong{display:block;line-height:1.45;text-wrap:balance}
+.footer-links{flex-shrink:0}
+@media(max-width:850px){.brand{max-width:none}.header-inner .nav-toggle{flex-shrink:0}}
+@media(max-width:600px){.header-inner{gap:12px}.brand{flex-basis:100%}.nav-toggle{margin-left:auto}.hero-subtitle{font-size:1rem}.footer-project strong{font-size:1rem}}

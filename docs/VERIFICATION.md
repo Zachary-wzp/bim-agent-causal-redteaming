@@ -156,10 +156,10 @@ artifacts, excluded from the website.
 ## Limits and remaining review
 
 - Release workflow and deployment results are recorded by GitHub Actions in
-  Zachary-wzp/bim-agent-sensitive-information. Deployment remains gated by the repository
+  Zachary-wzp/bim-agent-causal-redteaming. Deployment remains gated by the repository
   variable `PAGES_DEPLOYMENT_APPROVED` and successful validation.
 - The confirmed public origin is `https://zachary-wzp.github.io`, with project path
-  `/bim-agent-sensitive-information`. External research resource URLs remain empty; their
+  `/bim-agent-causal-redteaming`. External research resource URLs remain empty; their
   reachability cannot be verified until supplied.
 - Automated tests cannot grant release permission. The user approved the case
   selection, display treatment and website publication. Screenshots, architecture, statistical figures,
@@ -174,8 +174,8 @@ artifacts, excluded from the website.
 bundle exec jekyll serve --host 127.0.0.1 --port 4000
 ```
 
-Preview: <http://127.0.0.1:4000/bim-agent-sensitive-information/>.
-Case Explorer: <http://127.0.0.1:4000/bim-agent-sensitive-information/cases/>.
+Preview: <http://127.0.0.1:4000/bim-agent-causal-redteaming/>.
+Case Explorer: <http://127.0.0.1:4000/bim-agent-causal-redteaming/cases/>.
 The preview is local-only. If the server is stopped, restart with the command above.
 
 ## Repository entry page — 2026-10-27
@@ -216,3 +216,29 @@ Public website: <https://zachary-wzp.github.io/bim-agent-sensitive-information/>
 The [GitHub repository rename documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
 describes redirects for repository URLs; project-site URLs are excluded. Share
 the new website URL directly.
+
+## Full project title and final repository name — 2026-10-27
+
+The user selected `bim-agent-causal-redteaming` and supplied the full project title:
+
+> Uncovering Sensitive Information Exposure Mechanisms in Agentic LLM-Assisted BIM Design Collaboration through Causal Red-Teaming
+
+The README, website heading, header, footer, browser titles and Open Graph metadata
+now use this title. The website title comes from `_config.yml`; its public URL
+prefix, README links, QA defaults and current maintenance instructions use the
+new repository name. Earlier rename records above describe the URLs at that time.
+
+The header, main title and footer were checked at 320, 360, 768, 850, 860, 1024,
+1050, 1280 and 1440 px. Full title text and metadata matched exactly, with no
+horizontal overflow or clipped title text. Desktop and mobile screenshots were
+visually reviewed. The README homepage preview was recaptured from the production
+build with the complete title. Its case-output preview remains current.
+
+Content validation, 44 content regression checks, 19 Markdown rendering checks,
+the production Jekyll build and all 22 generated routes passed. All 122 browser
+checks passed, as did the isolated integration suite with 33 browser checks and
+root/project URL builds. Case records, prompt/output text, fact highlights and
+research-project files are unchanged.
+
+Current repository: <https://github.com/Zachary-wzp/bim-agent-causal-redteaming>.
+Current website: <https://zachary-wzp.github.io/bim-agent-causal-redteaming/>.
