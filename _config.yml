@@ -2,7 +2,7 @@ title: BIM Agent Privacy Red-Teaming
 description: A research showcase on role-based privacy boundaries and adversarial evaluation of BIM agents in collaborative design.
 lang: en
 url: "https://zachary-wzp.github.io"
-baseurl: /bim-agent-privacy-website
+baseurl: /bim-agent-sensitive-information
 timezone: Asia/Shanghai
 markdown: kramdown
 strict_front_matter: true

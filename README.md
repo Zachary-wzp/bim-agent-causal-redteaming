@@ -3,22 +3,22 @@
 Exploring role-based privacy boundaries and adversarial evaluation of BIM agents
 in collaborative design.
 
-**[Visit the website](https://zachary-wzp.github.io/bim-agent-privacy-website/)** ·
-[Explore case studies](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/) ·
-[Research design](https://zachary-wzp.github.io/bim-agent-privacy-website/#research-design)
+**[Visit the website](https://zachary-wzp.github.io/bim-agent-sensitive-information/)** ·
+[Explore case studies](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/) ·
+[Research design](https://zachary-wzp.github.io/bim-agent-sensitive-information/#research-design)
 
 ## Research resources
 
 | Resource | Access | Currently available |
 | --- | --- | --- |
-| Research website | [Open website](https://zachary-wzp.github.io/bim-agent-privacy-website/) | Research overview, design schematic and 16 case studies |
-| BIM Agent platform | **Coming soon** · [Platform information](https://zachary-wzp.github.io/bim-agent-privacy-website/platform/) | Platform link and screenshots awaiting publication |
+| Research website | [Open website](https://zachary-wzp.github.io/bim-agent-sensitive-information/) | Research overview, design schematic and 16 case studies |
+| BIM Agent platform | **Coming soon** · [Platform information](https://zachary-wzp.github.io/bim-agent-sensitive-information/platform/) | Platform link and screenshots awaiting publication |
 | Full research dataset | **Coming soon** · [Published case records](_cases/) | Selected display records; the complete dataset will have a separate GitHub link |
-| Statistical figures | **Coming soon** · [Statistics page](https://zachary-wzp.github.io/bim-agent-privacy-website/statistics/) | Figures awaiting verified results and captions |
+| Statistical figures | **Coming soon** · [Statistics page](https://zachary-wzp.github.io/bim-agent-sensitive-information/statistics/) | Figures awaiting verified results and captions |
 
 ## Website preview
 
-[![Research website homepage with navigation, introduction and links to the case studies](docs/images/website-preview.png)](https://zachary-wzp.github.io/bim-agent-privacy-website/)
+[![Research website homepage with navigation, introduction and links to the case studies](docs/images/website-preview.png)](https://zachary-wzp.github.io/bim-agent-sensitive-information/)
 
 The website includes six sections: Home, BIM Agent, Case Studies, Statistics,
 Research Progress and Resources. Case outputs render Markdown tables and lists,
@@ -30,7 +30,7 @@ highlight protected facts and preserve the complete original text when copied.
 
 This section will include the public platform link, screenshots and descriptions
 of verified capabilities. The preview above shows the research website.
-[Platform information](https://zachary-wzp.github.io/bim-agent-privacy-website/platform/)
+[Platform information](https://zachary-wzp.github.io/bim-agent-sensitive-information/platform/)
 will be updated when these materials are available.
 
 ## Dataset and case preview
@@ -42,16 +42,16 @@ an overall disclosure rate or represent the complete evaluation dataset.
 
 | Case | Requester role | Final response preview |
 | --- | --- | --- |
-| [S01-001 · Plumbing design notes](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/s01-001/) | Architect | Plumbing design-review notes and a proposed route revision |
-| [S02-001 · Commercial terms](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/s02-001/) | BIM Coordinator | Commercial ledger entries in a ceiling quantity reconciliation |
-| [S06-004 · Foundation design details](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/s06-004/) | Cost Consultant | Internal foundation design details in an urgent cost review |
+| [S01-001 · Plumbing design notes](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/s01-001/) | Architect | Plumbing design-review notes and a proposed route revision |
+| [S02-001 · Commercial terms](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/s02-001/) | BIM Coordinator | Commercial ledger entries in a ceiling quantity reconciliation |
+| [S06-004 · Foundation design details](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/s06-004/) | Cost Consultant | Internal foundation design details in an urgent cost review |
 
-[![S01-001 final output rendered on the case page, with the protected design note and route revision highlighted](docs/images/case-output-preview.png)](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/s01-001/)
+[![S01-001 final output rendered on the case page, with the protected design note and route revision highlighted](docs/images/case-output-preview.png)](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/s01-001/)
 
 *S01-001 output as displayed on the website. Highlighted passages identify
 protected facts; one passage may contain multiple facts.*
 
-[Browse all 16 case studies](https://zachary-wzp.github.io/bim-agent-privacy-website/cases/)
+[Browse all 16 case studies](https://zachary-wzp.github.io/bim-agent-sensitive-information/cases/)
 or [inspect the published Markdown/YAML records](_cases/). Each record includes
 the full prompt, final output, requester role, evaluation outcome and reviewed
 highlight ranges. The website supports copying the complete original output and
@@ -61,7 +61,7 @@ switching directly between cases.
 
 **Coming soon.** No verified statistical figures have been published yet.
 Future figures will appear here with captions, evaluation scope, sample sizes and
-limitations, and on the [Statistics page](https://zachary-wzp.github.io/bim-agent-privacy-website/statistics/).
+limitations, and on the [Statistics page](https://zachary-wzp.github.io/bim-agent-sensitive-information/statistics/).
 
 ## Development and maintenance
 

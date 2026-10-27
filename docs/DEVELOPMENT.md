@@ -54,14 +54,15 @@ Tested with Ruby 3.2.3, Bundler 2.6.9 and Jekyll 4.4.1. Ruby 3.2+ and Python 3
 are needed for the full validation commands. Node is optional, for browser QA only.
 
 ```bash
-cd bim-agent-privacy-website
+cd bim-agent-sensitive-information
 bundle config set --local path vendor/bundle
 bundle install
 bundle exec ruby scripts/validate_content.rb
 bundle exec jekyll serve --host 127.0.0.1 --port 4000
 ```
 
-Open <http://localhost:4000/bim-agent-privacy-website/>. Stop with Ctrl+C.
+Open <http://localhost:4000/bim-agent-sensitive-information/>. Stop with Ctrl+C.
+Use your existing checkout directory if its local name differs from the repository name.
 Run these commands inside Ubuntu / WSL, not Windows PowerShell. If Ruby is missing,
 install `ruby-full build-essential libyaml-dev zlib1g-dev`, then Bundler.
 The default preview preserves the GitHub Pages project prefix. To preview at `/`:
@@ -181,8 +182,8 @@ remain unchanged; the renderer uses the existing bundled kramdown and REXML libr
 
 ## GitHub Pages publication
 
-Repository: <https://github.com/Zachary-wzp/bim-agent-privacy-website>.
-Website: <https://zachary-wzp.github.io/bim-agent-privacy-website/>.
+Repository: <https://github.com/Zachary-wzp/bim-agent-sensitive-information>.
+Website: <https://zachary-wzp.github.io/bim-agent-sensitive-information/>.
 The user authorized publication to this repository on 2026-10-26.
 
 Pages uses **GitHub Actions**. The repository variable
@@ -199,7 +200,9 @@ For future updates:
 4. Commit and push to `main`. Follow **Actions → Validate, build and deploy research
    showcase** until both build and deploy succeed.
 5. Open the website and verify the changed pages. Keep the repository name and
-   configured origin/baseurl unchanged to retain the same public addresses.
+   configured origin/baseurl unchanged to retain the same public addresses. If the
+   repository is renamed, update all public URLs and baseurl-dependent checks before
+   deploying at the new address.
 
 The deployment can also be started from **Actions → Run workflow** on `main`.
 The full-dataset GitHub placeholder remains separate from the website repository;

@@ -17,7 +17,7 @@ const records = fixtures ? [] : JSON.parse(execFileSync('ruby', ['-rdate', '-rya
   }.to_json
 `, path.resolve(__dirname, '..')], { encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 }));
 const expectedCount = fixtures ? 2 : records.length;
-const base = '/bim-agent-privacy-website';
+const base = '/bim-agent-sensitive-information';
 const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png' };
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');

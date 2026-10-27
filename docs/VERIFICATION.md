@@ -156,10 +156,10 @@ artifacts, excluded from the website.
 ## Limits and remaining review
 
 - Release workflow and deployment results are recorded by GitHub Actions in
-  Zachary-wzp/bim-agent-privacy-website. Deployment remains gated by the repository
+  Zachary-wzp/bim-agent-sensitive-information. Deployment remains gated by the repository
   variable `PAGES_DEPLOYMENT_APPROVED` and successful validation.
 - The confirmed public origin is `https://zachary-wzp.github.io`, with project path
-  `/bim-agent-privacy-website`. External research resource URLs remain empty; their
+  `/bim-agent-sensitive-information`. External research resource URLs remain empty; their
   reachability cannot be verified until supplied.
 - Automated tests cannot grant release permission. The user approved the case
   selection, display treatment and website publication. Screenshots, architecture, statistical figures,
@@ -174,8 +174,8 @@ artifacts, excluded from the website.
 bundle exec jekyll serve --host 127.0.0.1 --port 4000
 ```
 
-Preview: <http://127.0.0.1:4000/bim-agent-privacy-website/>.
-Case Explorer: <http://127.0.0.1:4000/bim-agent-privacy-website/cases/>.
+Preview: <http://127.0.0.1:4000/bim-agent-sensitive-information/>.
+Case Explorer: <http://127.0.0.1:4000/bim-agent-sensitive-information/cases/>.
 The preview is local-only. If the server is stopped, restart with the command above.
 
 ## Repository entry page — 2026-10-27
@@ -196,3 +196,23 @@ checker passed for all 22 HTML pages. All 14 relative links/image references in
 the README, development guide and updated content guide resolved; all 9 distinct
 HTTPS Markdown links returned HTTP 200. README and docs remain excluded from the
 generated website.
+
+## Repository rename — 2026-10-27
+
+The repository was renamed to `Zachary-wzp/bim-agent-sensitive-information` at the
+user's request. The local Git remote, README links, Pages `baseurl`, QA defaults
+and current maintenance links now use the new name. Earlier release records keep
+the repository name in use at that time. The local checkout directory is unchanged.
+
+Validation passed with the new project prefix: 44 content regression checks,
+19 Markdown rendering checks, a production build with 22 HTML pages, 122 browser
+checks at 360/768/1440 px, and the isolated integration suite including 33 browser
+checks and root/project URL builds. All generated pages use the new canonical
+prefix and contain no old project URLs. Documentation relative links resolve.
+Case records, original prompts/outputs and highlight annotations are unchanged.
+
+Public repository: <https://github.com/Zachary-wzp/bim-agent-sensitive-information>.
+Public website: <https://zachary-wzp.github.io/bim-agent-sensitive-information/>.
+The [GitHub repository rename documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
+describes redirects for repository URLs; project-site URLs are excluded. Share
+the new website URL directly.

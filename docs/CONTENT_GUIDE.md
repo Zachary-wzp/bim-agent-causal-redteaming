@@ -1,5 +1,8 @@
 # Content maintenance guide
 
+Current repository (renamed on 2026-10-27):
+[Zachary-wzp/bim-agent-sensitive-information](https://github.com/Zachary-wzp/bim-agent-sensitive-information).
+
 界面内容以英文填写。这里的模板只说明字段，**不是实验记录**。仅加入用户已授权
 展示的材料，不要擅自导入其他记录。当前 16 个案例已获用户授权展示：
 保留完整提问与最终回答、不脱敏、不展示来源。用户已确认其中的敏感值不是现实
