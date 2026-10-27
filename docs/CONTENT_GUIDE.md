@@ -346,3 +346,25 @@ python3 scripts/check_site.py
 Inspect the real-site preview, including mobile layout, links, copy labels and
 figure captions. Run through the publication checklist. Validation failures exit
 nonzero and block CI; do not disable the gate to make a release pass.
+
+## 9. Repository landing page
+
+The root [README](../README.md) is the visitor-facing entry page. Keep its resource
+links, case preview and availability labels in sync with the website. Detailed
+setup and release instructions are in [DEVELOPMENT](DEVELOPMENT.md).
+
+- Once the platform link is public, update the README and `_data/platform.yml`.
+  Add actual platform screenshots to `assets/images/platform/`, with descriptive
+  alt text and captions; the website previews are not platform screenshots.
+- Once the complete dataset is public, update its README link and the reserved
+  `_data/resources.yml` entry. Keep the selected display records clearly labeled
+  separately from the full dataset.
+- Add verified statistical figures to `assets/images/figures/`, register them in
+  `_data/figures.yml`, and embed them in the README with scope, sample size and
+  limitations. Do not infer an overall disclosure rate from the selected cases.
+- `docs/images/website-preview.png` and `case-output-preview.png` are browser
+  captures of the public showcase, taken on 2026-10-27. Refresh them after relevant
+  presentation changes and visually check them. They are displayed only in the
+  repository; `docs/` is excluded from the generated website.
+- Use relative paths for repository documents and images, and the full public
+  website URL for website routes. Check links after moving documentation.

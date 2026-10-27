@@ -177,3 +177,22 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4000
 Preview: <http://127.0.0.1:4000/bim-agent-privacy-website/>.
 Case Explorer: <http://127.0.0.1:4000/bim-agent-privacy-website/cases/>.
 The preview is local-only. If the server is stopped, restart with the command above.
+
+## Repository entry page — 2026-10-27
+
+The root README now serves as the public research entry page: website link and
+preview, platform placeholder, complete-dataset placeholder, selected case records
+and statistical-figure placeholder. The former development README is preserved in
+`docs/DEVELOPMENT.md`, with its relative documentation links adjusted.
+
+The homepage and S01-001 output previews in `docs/images/` were captured from the
+live website using Chromium and visually checked. The output preview preserves
+the displayed protected-fact highlights and links to the complete case. These are
+showcase screenshots; no Agent platform screenshots or statistical plots were
+invented. No case records or research-project files changed.
+
+Content validation and the production Jekyll build passed. The generated-site
+checker passed for all 22 HTML pages. All 14 relative links/image references in
+the README, development guide and updated content guide resolved; all 9 distinct
+HTTPS Markdown links returned HTTP 200. README and docs remain excluded from the
+generated website.
