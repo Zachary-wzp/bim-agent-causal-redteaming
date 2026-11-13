@@ -10,6 +10,7 @@ Dir.mktmpdir('bim-content-tests-') do |tmp|
   reset = lambda do
     FileUtils.rm_rf(Dir.glob("#{tmp}/*", File::FNM_DOTMATCH).reject { |p| %w[. ..].include?(File.basename(p)) })
     FileUtils.cp_r("#{root}/_data", tmp)
+    write.call('_data/figures.yml', [])
     FileUtils.cp("#{root}/_config.yml", tmp)
     FileUtils.mkdir_p("#{tmp}/_cases")
     FileUtils.mkdir_p("#{tmp}/_updates")
@@ -35,6 +36,22 @@ Dir.mktmpdir('bim-content-tests-') do |tmp|
     puts "PASS #{name}"
   end
   verify.call('empty approved-content inventory', true)
+  put_figure = lambda do |pdf|
+    FileUtils.mkdir_p("#{tmp}/assets/images/figures")
+    File.write("#{tmp}/assets/images/figures/qa.png", 'Software fixture only')
+    File.write("#{tmp}/assets/images/figures/qa.pdf", '%PDF-1.4 software fixture only')
+    write.call('_data/figures.yml', [{'id' => 'qa', 'title' => 'QA figure', 'category' => 'Software test', 'image' => '/assets/images/figures/qa.png', 'pdf' => pdf, 'alt' => 'Software fixture', 'caption' => 'No research data', 'scope' => 'Software test only', 'source_note' => 'Software fixture'}])
+  end
+  verify.call('figure PDF link', true) { put_figure.call('/assets/images/figures/qa.pdf') }
+  verify.call('missing figure PDF', false) { put_figure.call('/assets/images/figures/missing.pdf') }
+  verify.call('external figure PDF', false) { put_figure.call('https://example.org/qa.pdf') }
+  verify.call('figure PDF path traversal', false) { put_figure.call('/assets/images/figures/../qa.pdf') }
+  verify.call('non-text figure PDF', false) { put_figure.call([]) }
+  verify.call('figure PDF symlink outside website', false) do
+    put_figure.call('/assets/images/figures/qa.pdf')
+    File.unlink("#{tmp}/assets/images/figures/qa.pdf")
+    File.symlink("#{root}/_config.yml", "#{tmp}/assets/images/figures/qa.pdf")
+  end
   verify.call('approved case schema', true) { put_case.call(case_data) }
   verify.call('unpublished safe record', true) { put_case.call(case_data.merge('published' => false, 'approved_for_publication' => false)) }
   verify.call('publication approval gate', false) { put_case.call(case_data.merge('approved_for_publication' => false)) }

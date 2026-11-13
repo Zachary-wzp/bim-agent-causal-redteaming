@@ -13,7 +13,7 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 | Research website | [Open website](https://zachary-wzp.github.io/bim-agent-causal-redteaming/) | Research overview, design schematic and 16 case studies |
 | BIM Agent platform | **Coming soon** · [Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Platform link and screenshots awaiting publication |
 | Full research dataset | **Coming soon** · [Published case records](_cases/) | Selected display records; the complete dataset will have a separate GitHub link |
-| Statistical figures | **Coming soon** · [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) | Figures awaiting verified results and captions |
+| Initial results | [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) | Three figures: task similarity, exposure rates and cell coverage |
 
 ## Website preview
 
@@ -56,11 +56,42 @@ the full prompt, final output, requester role, evaluation outcome and reviewed
 highlight ranges. The website supports copying the complete original output and
 switching directly between cases.
 
-## Statistical figures
+## Initial results
 
-**Coming soon.** No verified statistical figures have been published yet.
-Future figures will appear here with captions, evaluation scope, sample sizes and
-limitations, and on the [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/).
+These initial experimental results have a different scope from the 16 representative
+cases displayed on the website. The displayed case count is not the experimental
+sample size.
+
+### Task similarity
+
+Mean task similarity is below the 0.85 threshold in each of the eight scenarios.
+The threshold comparison refers to scenario means; individual cases can exceed it.
+
+[![Task similarity across eight scenarios, with each mean below the 0.85 threshold](assets/images/figures/task-similarity.png)](assets/images/figures/task-similarity.pdf)
+
+[View PDF](assets/images/figures/task-similarity.pdf)
+
+### Exposure rates
+
+The proposed method outperforms all five baselines in macro-average exposure rate,
+reaching **63.8% across eight scenarios**. This comparison concerns the macro-average;
+the proposed method does not have the highest rate in every scenario. Case counts
+and uncertainty estimates are not specified in this figure.
+
+[![Exposure rates across eight scenarios and their macro-average for six methods](assets/images/figures/exposure-comparison.png)](assets/images/figures/exposure-comparison.pdf)
+
+[View PDF](assets/images/figures/exposure-comparison.pdf)
+
+### Cell coverage
+
+The proposed method achieves more uniform cell coverage. The figure shows estimated
+prompts per cell for **168 cells per method**, with reference lines for the scaled
+quota of 20 and uniform allocation of 23.59.
+
+[![Estimated prompts per cell for six methods, showing a tighter distribution for the proposed method](assets/images/figures/cell-coverage.png)](assets/images/figures/cell-coverage.pdf)
+
+[View PDF](assets/images/figures/cell-coverage.pdf) ·
+[View all initial results](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/)
 
 ## Development and maintenance
 
@@ -73,5 +104,5 @@ This repository contains the showcase website and its published case selection.
 - [Publication checklist](docs/PUBLICATION_CHECKLIST.md)
 
 Materials still to add: the public Agent platform link and screenshots, the full
-dataset URL and documentation, verified statistical figures, research progress
+dataset URL and documentation, supporting experimental details, research progress
 records and publication/citation details.

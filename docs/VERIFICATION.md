@@ -11,7 +11,7 @@ are generated from their collections. All data-dependent sections have empty sta
 
 The current local display inventory is **16 cases, 1 homepage research architecture
 schematic, 0 platform screenshots, 0 evaluated-platform architecture images,
-0 statistical figures, 0 milestones, 0 research updates and 0 external
+3 initial-result figures, 0 milestones, 0 research updates and 0 external
 research resource links**. The case collection covers 13 distinct prompts; repeated
 requests retain separate final responses. Every included run has an evaluated,
 explicit direct disclosure in its final response. Prompts and complete final
@@ -162,7 +162,8 @@ artifacts, excluded from the website.
   `/bim-agent-causal-redteaming`. External research resource URLs remain empty; their
   reachability cannot be verified until supplied.
 - Automated tests cannot grant release permission. The user approved the case
-  selection, display treatment and website publication. Screenshots, architecture, statistical figures,
+  selection, display treatment and website publication. Three initial-result figures
+  were added on 2026-11-13. Platform screenshots, evaluated-platform architecture,
   research milestones/history, real resource URLs and citation material remain to
   be supplied and reviewed; empty states remain in place.
 - Browser verification used Chromium; Safari/Firefox and assistive-technology
@@ -242,3 +243,31 @@ research-project files are unchanged.
 
 Current repository: <https://github.com/Zachary-wzp/bim-agent-causal-redteaming>.
 Current website: <https://zachary-wzp.github.io/bim-agent-causal-redteaming/>.
+
+## Initial-result figures — 2026-11-13
+
+Three user-approved figures are now displayed on Statistics and in the repository
+README: task similarity across eight scenarios, exposure rates against five
+baselines, and cell coverage across six methods. They are labeled Initial Results.
+The 63.8% exposure figure is identified as the eight-scenario macro-average; the
+cell-coverage plot reports estimated prompts per cell with 168 cells per method.
+These figures are separate from the 16 representative cases. Unprovided case
+counts, dates and uncertainty estimates were not fabricated.
+
+The supplied PDFs were inspected as text and rendered at 220 dpi using Poppler.
+Desktop and mobile previews were visually reviewed. Public PDF copies match the
+supplied files byte-for-byte by SHA-256. Preview images were rendered from those
+PDFs without redrawing or changing chart values. Each figure provides a full-size
+image link and a separate View PDF link. Source filesystem paths are not published.
+
+Validation passed: 50 content checks (including allowed, missing, external,
+traversing, non-text and escaping-symlink PDF paths), 19 Markdown checks, production
+Jekyll build, 22-page static checks, 122 browser checks, and the isolated integration
+suite with 33 browser checks. Targeted checks at 360, 768 and 1440 px confirmed
+three loaded images, captions and accessible PDF links without horizontal overflow.
+All three PDF responses returned HTTP 200, PDF content types and matching hashes.
+Links remain available without JavaScript; README relative links resolve.
+
+The unit-test reset now keeps the figure inventory empty until a test explicitly
+adds its own fixture; real research figures are not test fixtures. No case text
+or original source files were modified. Raw experiments were not recomputed.

@@ -16,7 +16,8 @@ The initial implementation awaited verified material. Still needed:
 - BIM Agent GitHub URL, capability descriptions and architecture diagram.
 - Actual platform screenshots, captions, versions and capture dates.
 - Additional reviewed cases, if the selected collection is expanded.
-- Verified statistical figures with scope, sample size and limitations.
+- Supporting experimental details for the three initial-result figures, including
+  case counts and uncertainty estimates where applicable.
 - Research milestone statuses, evidence and dated progress snapshots.
 - Public code, paper, dataset and supplementary links; verified citation text.
 
@@ -43,8 +44,9 @@ Studies list's case-ID order; the first and last cases show unavailable directio
 Case navigation works without JavaScript and adapts to mobile screens.
 
 The Home and Case Studies counts reflect these 16 displayed runs. Platform screenshots,
-evaluated-platform architecture images, statistical figures and research progress remain empty until
-verified material is supplied. The Resources page reserves **Full Research Dataset
+evaluated-platform architecture images and research progress remain empty until
+verified material is supplied. Statistics now displays three initial-result figures
+with full-size PNG previews and original PDF links. The Resources page reserves **Full Research Dataset
 on GitHub** with **Coming soon** and no guessed URL. Only the website project is
 included in this repository; the research project is maintained separately.
 

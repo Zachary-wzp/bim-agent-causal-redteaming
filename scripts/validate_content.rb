@@ -272,6 +272,16 @@ class ContentValidator
     figures.each do |f|
       required(f, %w[id title category image alt caption scope source_note], 'figure')
       image(f['image'], 'figure.image', prefix: '/assets/images/figures/')
+      if f.key?('pdf')
+        if !f['pdf'].is_a?(String) || !f['pdf'].match?(%r{\A/assets/images/figures/[a-z0-9-]+\.pdf\z})
+          error('figure.pdf', 'must be a local PDF path under /assets/images/figures/')
+        else
+          full = File.join(@root, f['pdf'].delete_prefix('/'))
+          unless File.file?(full) && File.realpath(full).start_with?(@root + '/')
+            error('figure.pdf', 'must reference an existing PDF inside the website directory')
+          end
+        end
+      end
       if f.key?('sample_size') && !(f['sample_size'].is_a?(Integer) && f['sample_size'] >= 0)
         error('figure.sample_size', 'must be a nonnegative integer when supplied')
       end

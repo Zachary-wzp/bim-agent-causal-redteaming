@@ -208,13 +208,15 @@ Keep `_data/platform.yml` for independently verified platform documentation.
 
 ## 4. Statistical figures
 
-`_data/figures.yml` starts as `[]`. Replace it only with real, reviewed figure entries:
+`_data/figures.yml` contains the three approved initial-result figures. Add only real,
+reviewed figure entries:
 
 ```yaml
 - id: "verified-figure-id"
   title: "REPLACE WITH VERIFIED FIGURE TITLE"
   category: "Case Distribution"
   image: "/assets/images/figures/APPROVED-FILENAME.png"
+  # pdf: "/assets/images/figures/approved-filename.pdf" (optional)
   alt: "REPLACE WITH ACCESSIBLE DESCRIPTION"
   caption: "REPLACE WITH VERIFIED CAPTION"
   scope: "REPLACE WITH EXACT DATA SCOPE"
@@ -230,6 +232,10 @@ implementation to make the selected-cases/full-dataset distinction explicit.
 Use **Selected Case Studies** or **Full Experimental Dataset** only when accurate,
 and qualify the exact scope. Do not infer sample size from website case counts.
 No figures are calculated by the website. Clicking the image opens its full-size file.
+An optional `pdf` provides a separate View PDF link. Use a lowercase, hyphenated
+filename under `/assets/images/figures/`; omit the field when no PDF is available.
+PDF files must exist inside the website directory. Render previews directly from
+the approved PDFs and preserve the original figure values and labels.
 
 ## 5. Current milestones
 
