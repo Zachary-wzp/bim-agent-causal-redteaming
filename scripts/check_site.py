@@ -37,7 +37,7 @@ def check(root, base):
         for link in doc.links:
             parsed = urlsplit(link)
             if parsed.scheme or parsed.netloc:
-                assert parsed.scheme == 'https', f'Unsafe or unexpected URL {link}'
+                assert parsed.scheme in ('https', 'mailto'), f'Unsafe or unexpected URL {link}'
                 continue
             if parsed.path:
                 assert parsed.path.startswith(base + '/'), f'{path}: baseurl mismatch {link}'

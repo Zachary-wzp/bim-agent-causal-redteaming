@@ -6,6 +6,7 @@ case_explorer: true
 ---
 {% include page-heading.html eyebrow="02 / CASE EXPLORER" %}
 {% assign public_cases = site.cases | where: 'published', true | where: 'approved_for_publication', true | sort: 'case_id' %}
+<p class="notice">Only representative cases are shown here. Due to the potentially harmful nature of these cases, please contact <a href="mailto:zhou-peng.wang@connect.polyu.hk?cc=xingyu.tao%40polyu.edu.hk">zhou-peng.wang@connect.polyu.hk</a> and CC xingyu.tao@polyu.edu.hk to request the full case collection.</p>
 <p class="notice">This selection includes runs with direct disclosure in the final response. Each case presents one run; repeated requests can have different outputs. Published Cases counts the displayed runs, not the full experimental dataset.</p>
 <div data-case-explorer>
   <form class="filters" data-filters hidden role="search" aria-label="Filter case studies">
