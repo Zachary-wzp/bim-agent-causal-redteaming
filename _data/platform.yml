@@ -1,8 +1,16 @@
-title: BIM Agent
-summary: Platform documentation will describe the BIM Agent used in this project's sensitive information exposure evaluations. Verified capabilities and version details have not yet been published.
-github_url: ""
+title: Agentic BIM Common Data Environment Platform
+summary: "The Agentic BIM Common Data Environment Platform (ABCDE) supports role-aware BIM design collaboration. A coordinator delegates IFC work to isolated architecture, structure and building-services agents, while the workspace records tasks, model changes and audit events."
+github_url: "https://github.com/yixinhenry/agentic-bim-common-data-environment-platform"
 architecture_image: ""
 architecture_alt: ""
 architecture_caption: ""
-capabilities: []
-screenshots: []
+capabilities:
+  - "Project workspaces maintain ARC, STR and MEP IFC models, including creation of missing discipline models from natural-language requests."
+  - "An architecture agent can use an attached DWG drawing as a reference for evidence-based IFC generation."
+  - "Single-discipline and federated model views support element selection, clash candidates and linked issue workflows."
+  - "Role and discipline boundaries govern specialist tools; Cost.csv and Schedule.csv queries and IFC edits produce audit records."
+screenshots:
+  - title: "Federated IFC models and clash detection"
+    src: "/assets/images/platform/multi-bim-agent-demo.png"
+    alt: "Platform interface showing a federated ARC and MEP IFC model with clash detection results."
+    caption: "Platform interface with federated IFC models and clash detection results."
