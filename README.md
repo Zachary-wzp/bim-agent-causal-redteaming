@@ -11,7 +11,7 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 | Resource | Access | Currently available |
 | --- | --- | --- |
 | Research website | [Open website](https://zachary-wzp.github.io/bim-agent-causal-redteaming/) | Research overview, design schematic and 16 case studies |
-| BIM Agent platform | **Coming soon** · [Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Platform link and screenshots awaiting publication |
+| ABCDE Platform | [Source code](https://github.com/yixinhenry/agentic-bim-common-data-environment-platform) · [Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Role-aware IFC collaboration platform and verified capabilities |
 | Full research dataset | **Coming soon** · [Published case records](_cases/) | Selected display records; the complete dataset will have a separate GitHub link |
 | Initial results | [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) | Three figures: task similarity, exposure rates and cell coverage |
 
@@ -19,18 +19,20 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 
 [![Research website homepage with navigation, introduction and links to the case studies](docs/images/website-preview.png)](https://zachary-wzp.github.io/bim-agent-causal-redteaming/)
 
-The website includes six sections: Home, BIM Agent, Case Studies, Statistics,
+The website includes six sections: Home, ABCDE Platform, Case Studies, Statistics,
 Research Progress and Resources. Case outputs render Markdown tables and lists,
 highlight protected facts and preserve the complete original text when copied.
 
-## BIM Agent platform
+## Agentic BIM Common Data Environment Platform (ABCDE)
 
-**Platform link and screenshots: coming soon.**
-
-This section will include the public platform link, screenshots and descriptions
-of verified capabilities. The preview above shows the research website.
+**[Platform source code](https://github.com/yixinhenry/agentic-bim-common-data-environment-platform)** ·
 [Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/)
-will be updated when these materials are available.
+
+ABCDE coordinates role-aware BIM design collaboration across architecture,
+structure and building-services IFC models. The platform page documents verified
+capabilities. The image below shows federated IFC models and clash detection results.
+
+[![Platform interface showing federated IFC models and clash detection results](assets/images/platform/multi-bim-agent-demo.png)](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/)
 
 ## Dataset and case preview
 
