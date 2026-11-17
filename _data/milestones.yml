@@ -1,5 +1,5 @@
 as_of: "2026-11-17"
-summary: "Task 1 Steps 1 and 2, and Task 2 Steps 1 and 2, are confirmed complete. The remaining five steps are listed as planned; their completion has not been confirmed."
+summary: "Task 1 Steps 1 and 2, and Task 2 Steps 1 and 2, are confirmed complete. Completion of the remaining five steps has not been confirmed."
 items:
   - id: task-1-step-1
     task: "Task 1: Develop the SFC Graph-based Method"

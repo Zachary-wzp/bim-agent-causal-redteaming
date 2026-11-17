@@ -66,9 +66,8 @@ switching directly between cases.
 [View the research milestones](https://zachary-wzp.github.io/bim-agent-causal-redteaming/progress/).
 As of 2026-11-17, Task 1 Steps 1–2 and Task 2 Steps 1–2 are confirmed complete.
 The nine steps are grouped under the SFC graph-based method, D² matrix-guided
-evolutionary model, and causal exposure-mechanism analysis. The other five steps
-remain Planned until their status is confirmed. Planned months refer to the
-research schedule, not actual completion dates.
+evolutionary model, and causal exposure-mechanism analysis. Completion of the
+other five steps has not been confirmed.
 
 ## Initial results
 

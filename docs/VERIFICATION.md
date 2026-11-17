@@ -299,3 +299,15 @@ tests at 360/768/1440 px confirmed the three groups, nine steps, four completion
 five planned steps, relative months, exact full title, contact recipient and CC,
 absence of progress image/empty areas, and no horizontal overflow. The milestone
 list remains available without JavaScript. Research-project files are untouched.
+
+## Simplified milestone display — 2026-11-17
+
+At the user's request, Project Progress no longer displays Planned status badges,
+planned months, Updated timestamps or plan-note text. Summary text and README
+were aligned with that display. All nine steps and four Completed markers remain;
+underlying statuses, relative schedules and review dates remain in the data.
+
+Content validation, the production build, all 22 static pages and isolated
+integration checks passed. Focused browser checks at 360/768/1440 px confirmed
+that Planned/Updated text and planned-month rows are absent, with no overflow.
+The nine steps, four completion markers and no-JavaScript access remain intact.

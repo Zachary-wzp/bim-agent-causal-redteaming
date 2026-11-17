@@ -284,8 +284,10 @@ Task groups follow the supplied research schedule:
 2. Develop the D² Matrix-Guided Evolutionary Model
 3. Uncover Causal Mechanisms of Information Exposure
 
-`planned_period` preserves relative project months. Actual start and completion
-dates remain blank unless supplied; the review date is not a completion date.
+`planned_period` preserves relative project months in the data. The progress page
+does not display Planned badges, planned periods, Updated timestamps or plan notes.
+Actual start and completion dates remain blank unless supplied; the review date
+is not a completion date. Internal statuses and review dates remain validated.
 
 ## 6. Dated history
 
