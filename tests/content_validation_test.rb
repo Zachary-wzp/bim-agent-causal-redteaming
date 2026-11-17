@@ -11,6 +11,11 @@ Dir.mktmpdir('bim-content-tests-') do |tmp|
     FileUtils.rm_rf(Dir.glob("#{tmp}/*", File::FNM_DOTMATCH).reject { |p| %w[. ..].include?(File.basename(p)) })
     FileUtils.cp_r("#{root}/_data", tmp)
     write.call('_data/figures.yml', [])
+    # Validation fixtures must not depend on the published platform media.
+    write.call('_data/platform.yml', {
+      'title' => 'Software platform fixture', 'summary' => 'Synthetic validation data only',
+      'github_url' => '', 'architecture_image' => '', 'capabilities' => [], 'screenshots' => []
+    })
     FileUtils.cp("#{root}/_config.yml", tmp)
     FileUtils.mkdir_p("#{tmp}/_cases")
     FileUtils.mkdir_p("#{tmp}/_updates")
