@@ -11,7 +11,7 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 | Resource | Access | Currently available |
 | --- | --- | --- |
 | Research website | [Open website](https://zachary-wzp.github.io/bim-agent-causal-redteaming/) | Research overview, design schematic and 16 case studies |
-| BIM Agent platform | **Coming soon** · [Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Platform link and screenshots awaiting publication |
+| ABCDE Platform | [Source code](https://github.com/yixinhenry/agentic-bim-common-data-environment-platform) · [Platform showcase](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Overview, demonstration video and three screenshots |
 | Full research dataset | **Coming soon** · [Published case records](_cases/) | Selected display records; the complete dataset will have a separate GitHub link |
 | Initial results | [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) | Three figures: task similarity, exposure rates and cell coverage |
 
@@ -23,14 +23,17 @@ The website includes six sections: Home, BIM Agent, Case Studies, Statistics,
 Research Progress and Resources. Case outputs render Markdown tables and lists,
 highlight protected facts and preserve the complete original text when copied.
 
-## BIM Agent platform
+## ABCDE Platform
 
-**Platform link and screenshots: coming soon.**
+[ABCDE (Agentic BIM Common Data Environment Platform)](https://github.com/yixinhenry/agentic-bim-common-data-environment-platform)
+supports natural-language BIM queries, IFC editing, federated model viewing,
+clash candidate detection, CAD-to-IFC generation and initial model creation.
 
-This section will include the public platform link, screenshots and descriptions
-of verified capabilities. The preview above shows the research website.
-[Platform information](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/)
-will be updated when these materials are available.
+[![ABCDE workspace with an IFC model, role navigation and agent conversation](assets/images/platform/abcde-overview.png)](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/)
+
+[Explore the platform showcase](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/)
+for the embedded demonstration and all three screenshots, or
+[watch the video on YouTube](https://youtu.be/StFWHwiCAeQ).
 
 ## Dataset and case preview
 
@@ -103,6 +106,6 @@ This repository contains the showcase website and its published case selection.
 - [Verification record](docs/VERIFICATION.md)
 - [Publication checklist](docs/PUBLICATION_CHECKLIST.md)
 
-Materials still to add: the public Agent platform link and screenshots, the full
+Materials still to add: the evaluated-platform architecture diagram, the full
 dataset URL and documentation, supporting experimental details, research progress
 records and publication/citation details.

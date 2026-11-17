@@ -156,7 +156,9 @@ always remains available in the original Markdown disclosure.
 
 ## 3. Platform description and images
 
-Edit `_data/platform.yml`. Its `github_url` is the single source used by Platform,
+Edit `_data/platform.yml`. Use `video_id` for the YouTube video ID and `video_url`
+for its public watch link; `video_title` supplies the embedded player title.
+Its `github_url` is the single source used by Platform,
 Resources and Footer. Until the real URL is supplied, keep `github_url: ""`.
 `summary` and optional `capabilities` must describe verified functionality only.
 

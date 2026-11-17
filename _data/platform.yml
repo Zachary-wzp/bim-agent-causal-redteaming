@@ -1,8 +1,41 @@
-title: BIM Agent
-summary: Platform documentation will describe the BIM Agent used in this project's sensitive information exposure evaluations. Verified capabilities and version details have not yet been published.
-github_url: ""
+title: ABCDE Platform
+summary: >-
+  ABCDE (Agentic BIM Common Data Environment Platform) supports BIM collaboration
+  through natural-language interaction. A Project Manager Agent coordinates
+  architectural (ARC), structural (STR), and building-services (MEP) agents for
+  IFC queries, model editing, and model generation. The interface combines
+  interactive 3D viewing, role-specific conversations, delegated tasks, and
+  WIP, Shared, Published, and Archived model states.
+github_url: "https://github.com/yixinhenry/agentic-bim-common-data-environment-platform"
+video_id: "StFWHwiCAeQ"
+video_url: "https://youtu.be/StFWHwiCAeQ"
+video_title: "ABCDE Platform demonstration"
 architecture_image: ""
 architecture_alt: ""
 architecture_caption: ""
-capabilities: []
-screenshots: []
+capabilities:
+  - "IFC queries and editing through discipline agents, with selected-element context from the 3D viewer."
+  - "Individual and federated model viewing, with role-controlled CDE state transitions."
+  - "Cross-discipline clash candidate detection using axis-aligned bounding boxes, with issues linked to remediation tasks."
+  - "Architectural IFC generation from DWG references, with optional Kimi visual analysis of CAD evidence."
+  - "Initial ARC, STR, or MEP model creation from natural-language requests, followed by IFC verification and WIP registration."
+  - "Separate role conversations, delegated task records, notifications, audit events, and optional cost and schedule CSV tools."
+screenshots:
+  - title: "Platform overview"
+    src: "/assets/images/platform/abcde-overview.png"
+    alt: "ABCDE interface with a multi-storey IFC model, role navigation, CDE states, and an ARC agent conversation."
+    caption: "The platform brings model viewing, role selection, and agent conversations into one workspace. This example shows an architectural model and a natural-language model query."
+    version: ""
+    captured_at: ""
+  - title: "CAD reference to IFC"
+    src: "/assets/images/platform/cad-to-ifc.png"
+    alt: "A cottage IFC model with a pitched roof beside the ARC agent's result for an attached DWG reference."
+    caption: "An ARC agent generates an architectural IFC model from an attached CAD drawing. The task result records the generated file and validation checks."
+    version: ""
+    captured_at: ""
+  - title: "Natural-language model creation"
+    src: "/assets/images/platform/natural-language-modeling.png"
+    alt: "A two-storey house IFC model beside the written building request and ARC agent completion message."
+    caption: "A written building request creates an initial architectural WIP model. The generated model is displayed alongside the request and task result."
+    version: ""
+    captured_at: ""
