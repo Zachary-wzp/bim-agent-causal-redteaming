@@ -216,9 +216,12 @@ const server = http.createServer((req, res) => {
       await page.goto(`${origin}${base}/`);
       assert.equal(await page.locator('.research-strip strong').textContent(), String(expectedCount));
       await page.goto(`${origin}${base}/resources/`);
-      const dataset = page.locator('.resource').filter({hasText: 'Full Research Dataset on GitHub'});
-      assert((await dataset.textContent()).includes('Coming soon'));
-      assert.equal(await dataset.locator('a').count(), 0);
+      const dataset = page.locator('#dataset-access');
+      assert((await dataset.textContent()).includes('Available on request'));
+      const contact = new URL(await dataset.locator('a').getAttribute('href'));
+      assert.equal(contact.protocol, 'mailto:');
+      assert.equal(contact.pathname, 'zhou-peng.wang@connect.polyu.hk');
+      assert.equal(contact.searchParams.get('cc'), 'xingyu.tao@polyu.edu.hk');
       checks++;
     }
     const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: {width: 360, height: 800} });
@@ -238,7 +241,7 @@ const server = http.createServer((req, res) => {
     }
     checks++;
     assert.deepEqual(errors, []);
-    console.log(`Browser checks passed: ${checks}; 360/768/1440px, navigation, keyboard, no-JS${fixtures ? ', filters, safe Markdown/highlights, exact clipboard fallback, progress ordering, figures' : `, ${records.length} Markdown outputs, original text, highlighted facts/navigation, exact clipboard, all filter values, dataset placeholder`}.`);
+    console.log(`Browser checks passed: ${checks}; 360/768/1440px, navigation, keyboard, no-JS${fixtures ? ', filters, safe Markdown/highlights, exact clipboard fallback, progress ordering, figures' : `, ${records.length} Markdown outputs, original text, highlighted facts/navigation, exact clipboard, all filter values, dataset contact`}.`);
   } finally {
     await browser.close();
     server.close();

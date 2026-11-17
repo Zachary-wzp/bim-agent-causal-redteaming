@@ -300,13 +300,14 @@ class ContentValidator
       enum(m, 'status', %w[planned in_progress completed], path)
       starts = date(m['start_date'], "#{path}.start_date")
       ends = date(m['completed_at'], "#{path}.completed_at")
-      verified = date(m['last_verified_at'], "#{path}.last_verified_at")
+      required(m, %w[evidence_note], path) if m.key?('evidence_note')
+      verified = date(m['last_verified_at'], "#{path}.last_verified_at", required: m.key?('evidence_note'))
       [starts, ends, verified].compact.each { |d| error(path, 'recorded date exceeds snapshot cutoff') if cutoff && d > cutoff }
       error(path, 'completion precedes start') if starts && ends && ends < starts
       error(path, 'only completed milestones may have completed_at') if ends && m['status'] != 'completed'
       text_list(m['achievements'], "#{path}.achievements", nonempty: m['status'] == 'completed')
       text_list(m['next_steps'], "#{path}.next_steps")
-      links(m['evidence'], "#{path}.evidence", nonempty: true)
+      links(m['evidence'], "#{path}.evidence", nonempty: !m.key?('evidence_note'))
     end
     ids = items.map { |m| m['id'] }
     updates.each do |path, u|

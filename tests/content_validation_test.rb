@@ -11,6 +11,7 @@ Dir.mktmpdir('bim-content-tests-') do |tmp|
     FileUtils.rm_rf(Dir.glob("#{tmp}/*", File::FNM_DOTMATCH).reject { |p| %w[. ..].include?(File.basename(p)) })
     FileUtils.cp_r("#{root}/_data", tmp)
     write.call('_data/figures.yml', [])
+    write.call('_data/milestones.yml', {'as_of' => '', 'summary' => '', 'items' => []})
     # Validation fixtures must not depend on the published platform media.
     write.call('_data/platform.yml', {
       'title' => 'Software platform fixture', 'summary' => 'Synthetic validation data only',
@@ -102,5 +103,12 @@ Dir.mktmpdir('bim-content-tests-') do |tmp|
   verify.call('unsafe resource URL', false) { write.call('_data/resources.yml', {'items' => [{'title' => 'QA', 'type' => 'code', 'status' => 'published', 'url' => 'javascript:alert(1)'}]}) }
   verify.call('future snapshot without evidence', false) { File.write("#{tmp}/_updates/qa.md", {'published' => true, 'title' => 'QA', 'summary' => 'QA', 'snapshot_date' => '2999-01-01', 'milestone_ids' => [], 'achievements' => [], 'evidence' => [], 'next_steps' => []}.to_yaml + "---\n") }
   verify.call('unsupported milestone completion', false) { write.call('_data/milestones.yml', {'as_of' => '2020-01-01', 'summary' => 'QA', 'items' => [{'id' => 'qa', 'title' => 'QA', 'status' => 'completed', 'achievements' => [], 'next_steps' => [], 'evidence' => []}]}) }
+  author_milestone = {'id' => 'qa', 'title' => 'QA milestone', 'status' => 'completed', 'achievements' => ['QA completion'], 'next_steps' => [], 'evidence' => [], 'evidence_note' => 'Confirmed by the project author', 'last_verified_at' => '2020-01-01'}
+  put_milestone = ->(item) { write.call('_data/milestones.yml', {'as_of' => '2020-01-01', 'summary' => 'QA snapshot', 'items' => [item]}) }
+  verify.call('dated author-confirmed milestone', true) { put_milestone.call(author_milestone) }
+  verify.call('empty author confirmation', false) { put_milestone.call(author_milestone.merge('evidence_note' => '')) }
+  verify.call('non-text author confirmation', false) { put_milestone.call(author_milestone.merge('evidence_note' => true)) }
+  verify.call('undated author confirmation', false) { put_milestone.call(author_milestone.merge('last_verified_at' => '')) }
+  verify.call('author confirmation without achievements', false) { put_milestone.call(author_milestone.merge('achievements' => [])) }
 end
 puts "#{checks} content validation checks passed."

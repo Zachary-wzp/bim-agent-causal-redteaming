@@ -10,16 +10,16 @@ Studies, Statistics, Project Progress and Resources. Case and update detail page
 are generated from their collections. All data-dependent sections have empty states.
 
 The current local display inventory is **16 cases, 1 homepage research architecture
-schematic, 0 platform screenshots, 0 evaluated-platform architecture images,
-3 initial-result figures, 0 milestones, 0 research updates and 0 external
-research resource links**. The case collection covers 13 distinct prompts; repeated
+schematic, 3 platform screenshots, 0 evaluated-platform architecture images,
+3 initial-result figures, 9 milestones and 0 dated research-history entries**.
+The platform repository and demo video are linked. The case collection covers 13 distinct prompts; repeated
 requests retain separate final responses. Every included run has an evaluated,
 explicit direct disclosure in its final response. Prompts and complete final
 answers are preserved without redaction. Source metadata is not displayed.
 The homepage architecture follows the user-specified multi-agent design and is
 explicitly labeled as a design schematic. It shows a Coordinator Agent routing
 requests by user role to ARC, STR, MEP and COST agents, then combining responses.
-The full-dataset GitHub entry is reserved as Coming soon with a blank URL.
+The full dataset is available by contacting the authors; no GitHub release is promised.
 
 The Home hero uses a centered text layout with the research title, introduction
 and navigation links. Its case-output excerpt has been removed. The architecture
@@ -164,7 +164,7 @@ artifacts, excluded from the website.
 - Automated tests cannot grant release permission. The user approved the case
   selection, display treatment and website publication. Three initial-result figures
   were added on 2026-11-13. Platform screenshots, evaluated-platform architecture,
-  research milestones/history, real resource URLs and citation material remain to
+  further research history, other resource URLs and citation material remain to
   be supplied and reviewed; empty states remain in place.
 - Browser verification used Chromium; Safari/Firefox and assistive-technology
   testing were not performed.
@@ -271,3 +271,31 @@ Links remain available without JavaScript; README relative links resolve.
 The unit-test reset now keeps the figure inventory empty until a test explicitly
 adds its own fixture; real research figures are not test fixtures. No case text
 or original source files were modified. Raw experiments were not recomputed.
+
+## Dataset access and task-based milestones — 2026-11-17
+
+Resources and README now direct full-dataset requests to the authors, using the
+same recipient and CC as the case page. The former GitHub dataset-release promise
+was removed. The full project title already matched the user's supplied title;
+the homepage, header, footer, document titles and README were checked for agreement.
+
+Project Progress uses text status and three task groups from the supplied research
+schedule, with nine steps and their relative planned months. Task 1 Steps 1–2 and
+Task 2 Steps 1–2 are Completed as confirmed by the author; the other five steps
+remain Planned pending confirmation. The review date is 2026-11-17. Actual start
+and completion dates are not inferred from the Gantt chart. No screenshot, image
+placeholder or empty snapshot/history section is displayed. The homepage shows
+the current milestone summary. The supplied chart is not uploaded to the website.
+
+Milestone validation accepts a dated, nonempty author-confirmation note as an
+alternative to public evidence links. Completion still requires achievements;
+missing dates, empty/non-text notes and unsupported completion are rejected.
+The isolated unit tests reset milestones to avoid treating research records as
+fixtures. The two existing ABCDE platform commits were fast-forwarded before work.
+
+Validation passed: 55 content checks, the production Jekyll build, all 22 generated
+pages, 122 browser checks and the integration suite with 33 browser checks. Focused
+tests at 360/768/1440 px confirmed the three groups, nine steps, four completions,
+five planned steps, relative months, exact full title, contact recipient and CC,
+absence of progress image/empty areas, and no horizontal overflow. The milestone
+list remains available without JavaScript. Research-project files are untouched.

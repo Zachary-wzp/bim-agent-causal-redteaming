@@ -1,3 +1,93 @@
-as_of: ""
-summary: ""
-items: []
+as_of: "2026-11-17"
+summary: "Task 1 Steps 1 and 2, and Task 2 Steps 1 and 2, are confirmed complete. The remaining five steps are listed as planned; their completion has not been confirmed."
+items:
+  - id: task-1-step-1
+    task: "Task 1: Develop the SFC Graph-based Method"
+    title: "Step 1. Design of the SFC graph"
+    planned_period: "Months 1–4"
+    status: completed
+    last_verified_at: "2026-11-17"
+    achievements: ["Design of the SFC graph completed."]
+    evidence: []
+    evidence_note: "Completion confirmed by the project author on 2026-11-17."
+    next_steps: []
+  - id: task-1-step-2
+    task: "Task 1: Develop the SFC Graph-based Method"
+    title: "Step 2. SFC Graph-based detection"
+    planned_period: "Months 3–10"
+    status: completed
+    last_verified_at: "2026-11-17"
+    achievements: ["SFC Graph-based detection completed."]
+    evidence: []
+    evidence_note: "Completion confirmed by the project author on 2026-11-17."
+    next_steps: []
+  - id: task-1-step-3
+    task: "Task 1: Develop the SFC Graph-based Method"
+    title: "Step 3. Method evaluation"
+    planned_period: "Months 7–12"
+    status: planned
+    last_verified_at: "2026-11-17"
+    achievements: []
+    evidence: []
+    evidence_note: "Planned in the research schedule. Completion has not been confirmed."
+    next_steps: []
+  - id: task-2-step-1
+    task: "Task 2: Develop the D² Matrix-Guided Evolutionary Model"
+    title: "Step 1. Seed Adversarial Prompt Preparation"
+    planned_period: "Months 7–12"
+    status: completed
+    last_verified_at: "2026-11-17"
+    achievements: ["Seed adversarial prompt preparation completed."]
+    evidence: []
+    evidence_note: "Completion confirmed by the project author on 2026-11-17."
+    next_steps: []
+  - id: task-2-step-2
+    task: "Task 2: Develop the D² Matrix-Guided Evolutionary Model"
+    title: "Step 2. D² Matrix-Guided Prompt Evolution"
+    planned_period: "Months 11–18"
+    status: completed
+    last_verified_at: "2026-11-17"
+    achievements: ["D² matrix-guided prompt evolution completed."]
+    evidence: []
+    evidence_note: "Completion confirmed by the project author on 2026-11-17."
+    next_steps: []
+  - id: task-2-step-3
+    task: "Task 2: Develop the D² Matrix-Guided Evolutionary Model"
+    title: "Step 3. Method Evaluation"
+    planned_period: "Months 15–22"
+    status: planned
+    last_verified_at: "2026-11-17"
+    achievements: []
+    evidence: []
+    evidence_note: "Planned in the research schedule. Completion has not been confirmed."
+    next_steps: []
+  - id: task-3-step-1
+    task: "Task 3: Uncover Causal Mechanisms of Information Exposure"
+    title: "Step 1. Construct a Trajectory Dataset for Causal Analysis"
+    planned_period: "Months 21–28"
+    status: planned
+    last_verified_at: "2026-11-17"
+    achievements: []
+    evidence: []
+    evidence_note: "Planned in the research schedule. Completion has not been confirmed."
+    next_steps: []
+  - id: task-3-step-2
+    task: "Task 3: Uncover Causal Mechanisms of Information Exposure"
+    title: "Step 2. Identify Candidate Exposure Mechanisms"
+    planned_period: "Months 25–30"
+    status: planned
+    last_verified_at: "2026-11-17"
+    achievements: []
+    evidence: []
+    evidence_note: "Planned in the research schedule. Completion has not been confirmed."
+    next_steps: []
+  - id: task-3-step-3
+    task: "Task 3: Uncover Causal Mechanisms of Information Exposure"
+    title: "Step 3. Causally Validate Candidate Mechanisms"
+    planned_period: "Months 27–36"
+    status: planned
+    last_verified_at: "2026-11-17"
+    achievements: []
+    evidence: []
+    evidence_note: "Planned in the research schedule. Completion has not been confirmed."
+    next_steps: []

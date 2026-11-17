@@ -12,7 +12,7 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 | --- | --- | --- |
 | Research website | [Open website](https://zachary-wzp.github.io/bim-agent-causal-redteaming/) | Research overview, design schematic and 16 case studies |
 | ABCDE Platform | [Source code](https://github.com/yixinhenry/agentic-bim-common-data-environment-platform) · [Platform showcase](https://zachary-wzp.github.io/bim-agent-causal-redteaming/platform/) | Overview, demonstration video and three screenshots |
-| Full research dataset | **Coming soon** · [Published case records](_cases/) | Selected display records; the complete dataset will have a separate GitHub link |
+| Full research dataset | [Contact the authors](https://zachary-wzp.github.io/bim-agent-causal-redteaming/resources/#dataset-access) | Available on request; [representative case records](_cases/) are public |
 | Initial results | [Statistics page](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) | Three figures: task similarity, exposure rates and cell coverage |
 
 ## Website preview
@@ -37,7 +37,9 @@ for the embedded demonstration and all three screenshots, or
 
 ## Dataset and case preview
 
-**Full dataset on GitHub: coming soon.** The published collection currently contains
+**Full dataset: available on request from the authors.** Please contact
+[zhou-peng.wang@connect.polyu.hk](mailto:zhou-peng.wang@connect.polyu.hk?cc=xingyu.tao%40polyu.edu.hk)
+and CC xingyu.tao@polyu.edu.hk. The published collection currently contains
 16 runs across 13 distinct prompts. These cases were selected because their final
 responses explicitly disclosed protected facts. This selection does not establish
 an overall disclosure rate or represent the complete evaluation dataset.
@@ -58,6 +60,15 @@ or [inspect the published Markdown/YAML records](_cases/). Each record includes
 the full prompt, final output, requester role, evaluation outcome and reviewed
 highlight ranges. The website supports copying the complete original output and
 switching directly between cases.
+
+## Project progress
+
+[View the research milestones](https://zachary-wzp.github.io/bim-agent-causal-redteaming/progress/).
+As of 2026-11-17, Task 1 Steps 1–2 and Task 2 Steps 1–2 are confirmed complete.
+The nine steps are grouped under the SFC graph-based method, D² matrix-guided
+evolutionary model, and causal exposure-mechanism analysis. The other five steps
+remain Planned until their status is confirmed. Planned months refer to the
+research schedule, not actual completion dates.
 
 ## Initial results
 
@@ -106,6 +117,6 @@ This repository contains the showcase website and its published case selection.
 - [Verification record](docs/VERIFICATION.md)
 - [Publication checklist](docs/PUBLICATION_CHECKLIST.md)
 
-Materials still to add: the evaluated-platform architecture diagram, the full
-dataset URL and documentation, supporting experimental details, research progress
-records and publication/citation details.
+Materials still to add: the evaluated-platform architecture diagram, dataset
+documentation, supporting experimental details, subsequent research progress
+updates and publication/citation details.

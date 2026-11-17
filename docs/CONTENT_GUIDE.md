@@ -241,9 +241,10 @@ the approved PDFs and preserve the original figure values and labels.
 
 ## 5. Current milestones
 
-`_data/milestones.yml` uses `as_of`, `summary` and `items`. Keep `as_of: ""` and
-`items: []` until a verified research snapshot is available. Do not create dated
-completed research milestones from website development work.
+`_data/milestones.yml` uses `as_of`, `summary` and `items`. The 2026-11-17 author
+update records nine steps under three tasks, with Task 1 Steps 1–2 and Task 2
+Steps 1–2 completed. The remaining steps are Planned pending status confirmation.
+Do not create completed research milestones from website development work.
 
 ```yaml
 as_of: "" # Replace with the actual verified snapshot cutoff before adding items.
@@ -255,31 +256,36 @@ Each published item uses this structure:
 
 ```yaml
 - id: "stable-milestone-id"
+  task: "REPLACE WITH RESEARCH TASK TITLE"
   title: "REPLACE WITH RESEARCH MILESTONE TITLE"
+  planned_period: "REPLACE WITH RELATIVE PLANNED MONTHS"
   status: planned
   start_date: ""
   completed_at: ""
   last_verified_at: ""
   achievements: []
-  evidence: [] # Add at least one verified {title, url} object before publishing.
+  evidence: [] # Supply links, or a dated author-confirmation note below.
+  # evidence_note: "REPLACE WITH ACTUAL AUTHOR CONFIRMATION OR PLAN NOTE"
   next_steps: []
 ```
 
 Statuses: `planned`, `in_progress`, `completed`. Every published milestone needs
-evidence, including a public research-plan reference for a planned item.
+evidence links or a nonempty `evidence_note` recording the author's confirmation
+or research-plan basis. A note requires `last_verified_at`; it is an author update,
+not independent experimental verification. The progress page uses text and task
+groups, with no screenshot area or empty snapshot/history placeholders.
 Completed milestones need recorded achievements. Dates may stay blank if unknown;
 when provided they cannot exceed `as_of`, and completion cannot precede start.
 The website does not compute a completion percentage.
 
-Supported research categories (these are taxonomy, not current statuses):
+Task groups follow the supplied research schedule:
 
-1. Privacy Scenario and Role-Permission Modeling
-2. Adversarial Case Development and Expert Review
-3. BIM Agent Testing and Trajectory Collection
-4. T-MAP Adversarial Search and Dataset Construction
-5. Trajectory Pattern Mining
-6. Causal Mechanism Analysis and Validation
-7. Publication and Research Resource Release
+1. Develop the SFC Graph-based Method
+2. Develop the D² Matrix-Guided Evolutionary Model
+3. Uncover Causal Mechanisms of Information Exposure
+
+`planned_period` preserves relative project months. Actual start and completion
+dates remain blank unless supplied; the review date is not a completion date.
 
 ## 6. Dated history
 
@@ -338,10 +344,10 @@ Use `status: published` only with an actual public HTTPS URL. The platform GitHu
 repository is managed in `platform.yml`; do not duplicate it here. Citation supports
 multiline BibTeX using `citation: |` and is rendered as escaped plain text.
 
-The **Full Research Dataset on GitHub** entry is already reserved in
-`_data/resources.yml`. It displays **Coming soon** while its URL is blank.
-When the dataset repository is ready, fill this entry's `url` with its real
-public GitHub URL and change `status` to `published`. No template change is needed.
+The full dataset is available by contacting the authors, not through a planned
+GitHub dataset release. The contact section is in `resources.md`: email
+zhou-peng.wang@connect.polyu.hk and CC xingyu.tao@polyu.edu.hk. Keep these details
+aligned with the case page and README. `_data/resources.yml` holds other resources.
 
 ## 8. Review and verify
 
@@ -367,9 +373,8 @@ setup and release instructions are in [DEVELOPMENT](DEVELOPMENT.md).
 - Once the platform link is public, update the README and `_data/platform.yml`.
   Add actual platform screenshots to `assets/images/platform/`, with descriptive
   alt text and captions; the website previews are not platform screenshots.
-- Once the complete dataset is public, update its README link and the reserved
-  `_data/resources.yml` entry. Keep the selected display records clearly labeled
-  separately from the full dataset.
+- Keep the complete-dataset access route as an author request unless the user
+  changes it. Distinguish the public representative records from the full dataset.
 - Add verified statistical figures to `assets/images/figures/`, register them in
   `_data/figures.yml`, and embed them in the README with scope, sample size and
   limitations. Do not infer an overall disclosure rate from the selected cases.

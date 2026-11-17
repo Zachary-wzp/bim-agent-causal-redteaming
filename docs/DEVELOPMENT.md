@@ -18,7 +18,7 @@ The initial implementation awaited verified material. Still needed:
 - Additional reviewed cases, if the selected collection is expanded.
 - Supporting experimental details for the three initial-result figures, including
   case counts and uncertainty estimates where applicable.
-- Research milestone statuses, evidence and dated progress snapshots.
+- Subsequent author-confirmed milestone updates and supporting evidence.
 - Public code, paper, dataset and supplementary links; verified citation text.
 
 Initial content counts: **0 cases, 0 screenshots, 0 statistical figures,
@@ -43,11 +43,12 @@ with the current position in the approved collection. Links follow the Case
 Studies list's case-ID order; the first and last cases show unavailable directions.
 Case navigation works without JavaScript and adapts to mobile screens.
 
-The Home and Case Studies counts reflect these 16 displayed runs. Platform screenshots,
-evaluated-platform architecture images and research progress remain empty until
-verified material is supplied. Statistics now displays three initial-result figures
-with full-size PNG previews and original PDF links. The Resources page reserves **Full Research Dataset
-on GitHub** with **Coming soon** and no guessed URL. Only the website project is
+The Home and Case Studies counts reflect these 16 displayed runs. The ABCDE
+platform showcase includes a video and three screenshots. Statistics displays
+three initial-result figures with full-size PNG previews and original PDF links.
+Project Progress groups nine milestones into three tasks; four steps are confirmed
+complete as of 2026-11-17. It has no screenshot or empty snapshot area. The Resources
+page directs full-dataset requests to the authors. Only the website project is
 included in this repository; the research project is maintained separately.
 
 ## Local preview (WSL / Linux)
@@ -207,8 +208,8 @@ For future updates:
    deploying at the new address.
 
 The deployment can also be started from **Actions → Run workflow** on `main`.
-The full-dataset GitHub placeholder remains separate from the website repository;
-replace it only when the actual dataset has an approved URL.
+The full dataset is available by contacting the authors. Keep the Resources page,
+case notice and README contact details consistent.
 
 The workflow follows the official
 [GitHub Pages custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
