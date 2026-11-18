@@ -9,6 +9,7 @@ description: Agentic BIM Common Data Environment Platform
 <section class="section prose" aria-labelledby="platform-overview-title">
   <h2 id="platform-overview-title">Platform overview</h2>
   <p>{{ platform.summary | escape }}</p>
+  <p>ABCDE is the experimental setting for the study. Its records let the team follow a request across agent messages, delegated tasks and returned BIM information. The <a href="{{ '/progress/' | relative_url }}#causal-evaluation">trajectory study</a> will use that sequence to test where an exposure arose. The demonstration below shows the design workspace in use.</p>
   <div class="actions">
     {% if platform.github_url and platform.github_url != '' %}
     <a class="button" href="{{ platform.github_url | escape }}" rel="noopener noreferrer">View source on GitHub ↗</a>

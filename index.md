@@ -4,14 +4,15 @@ description: Investigating sensitive information exposure mechanisms in agentic 
 ---
 {% assign public_cases = site.cases | where: 'published', true | where: 'approved_for_publication', true %}
 {% assign updates = site.updates | where: 'published', true | sort: 'snapshot_date' | reverse %}
+{% assign exposure_comparison = site.data.figures | where: 'id', 'exposure-comparison' | first %}
 <section class="hero">
   <div class="hero-copy">
     <p class="eyebrow">BIM research / Causal red-teaming</p>
     <h1>{{ site.title | escape }}</h1>
-    <p class="hero-description">How can a BIM agent reveal information beyond a collaborator’s role? Explore the prompts, model responses and results from the study.</p>
+    <p class="hero-description">When BIM agents work across disciplines, what can a collaborator learn beyond their permissions? We study what a response reveals on its own, what several replies reveal together, and how to test which interactions caused the exposure.</p>
     <div class="actions">
-      <a class="button" href="{{ '/cases/' | relative_url }}">Explore case studies <span aria-hidden="true">↗</span></a>
-      <a class="text-link" href="{{ '/statistics/' | relative_url }}">View initial results <span aria-hidden="true">→</span></a>
+      <a class="button" href="{{ '/statistics/' | relative_url }}">View preliminary results <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="#research-framework">Explore the three research tasks <span aria-hidden="true">↓</span></a>
     </div>
   </div>
   <figure class="model-sheet">
@@ -24,8 +25,21 @@ description: Investigating sensitive information exposure mechanisms in agentic 
   </figure>
 </section>
 <div class="research-strip"><a href="{{ '/cases/' | relative_url }}"><strong>{{ public_cases.size }}</strong> Published Cases <span aria-hidden="true">↗</span></a><a href="#research-design">Research design <span aria-hidden="true">↓</span></a><a href="{{ '/progress/' | relative_url }}">Project progress <span aria-hidden="true">↗</span></a></div>
-<section class="section overview"><div><p class="eyebrow">RESEARCH OVERVIEW</p><h2>Shared models.<br> Different permissions.</h2></div><div class="overview-copy"><p>Building Information Modeling brings project information into a shared environment. Collaboration involves multiple roles, each with a different need for—and authorization to access—that information.</p><p>This project aims to uncover sensitive information exposure mechanisms through causal red-teaming: how adversarial requests relate to role permissions, what the agent actually returns, and how those outputs are evaluated for information exposure.</p><p class="small">Attack intent and observed exposure are reported separately. Case outcomes reflect the evaluated final response.</p></div></section>
-<section class="section"><div class="section-heading"><div><p class="eyebrow">RESEARCH WORKFLOW</p><h2>From requests to evidence</h2></div><span class="small">Method overview · not a report of completed experiments</span></div><ol class="workflow"><li><span>01</span><strong>BIM / Project Data</strong><small>Roles & permissions</small></li><li><span>02</span><strong>BIM Agent</strong><small>System under evaluation</small></li><li><span>03</span><strong>Adversarial Cases</strong><small>Intended exposure</small></li><li><span>04</span><strong>Agent Outputs</strong><small>Recorded responses</small></li><li><span>05</span><strong>Leakage Evaluation</strong><small>Observed outcomes</small></li></ol></section>
+<section class="section overview">
+  <div><p class="eyebrow">The research question</p><h2>What does a conversation reveal?</h2></div>
+  <div class="overview-copy">
+    <p>A project team may share a building model while keeping design decisions or commercial terms available only to certain roles. A reply can disclose a protected fact directly. Several replies can also supply enough spatial or engineering context to infer a fact that no single reply states.</p>
+    <p>A BIM manager deciding whether to deploy an agent needs to know where an authorization check would help. That requires tracing a disclosure across the conversation and testing whether a safeguard reduces exposure while the team can still do its work.</p>
+  </div>
+</section>
+<section class="section" id="research-framework" aria-labelledby="framework-title">
+  <div class="section-heading"><div><p class="eyebrow">Research framework</p><h2 id="framework-title">Detect, elicit and explain exposure</h2></div></div>
+  <ol class="workflow">
+    <li><span>01</span><h3>Detect</h3><p>Can a reader infer a protected fact from several replies? The Sensitive-Fact-Centric (SFC) graph connects evidence across turns using BIM relationships. A separate inference step sees the evidence and domain knowledge while the protected answer is withheld.</p><a href="{{ '/progress/' | relative_url }}#detector-evaluation">How detection will be evaluated</a></li>
+    <li><span>02</span><h3>Elicit</h3><p>Do the tests cover different ways information can be exposed? The Dual-Diversity (D²) matrix groups prompts by strategy and exposure type.{% if exposure_comparison %} {{ exposure_comparison.caption | escape }}{% endif %}</p><a href="{{ '/statistics/' | relative_url }}">Inspect the pilot results</a></li>
+    <li><span>03</span><h3>Explain</h3><p>Which agent interactions actually contribute to exposure? The study will compare runs with and without exposure, identify candidate pathways, then test them through controlled interventions across projects and language models.</p><a href="{{ '/progress/' | relative_url }}#causal-evaluation">How a pathway will be tested</a></li>
+  </ol>
+</section>
 <section class="section research-design" id="research-design" aria-labelledby="research-design-title">
   <div class="research-design-copy"><p class="eyebrow">RESEARCH DESIGN</p><h2 id="research-design-title">Role-aware specialist collaboration</h2><p>The research design places a coordinator between the user and four specialist agents for architecture, structure, building services and cost.</p><p>The coordinator selects the relevant agents according to the user's role, delegates the question and combines their responses into an answer.</p><p class="small">Design schematic. The case studies separately document observed outputs from evaluated runs.</p><a class="text-link" href="{{ '/platform/' | relative_url }}">ABCDE Platform →</a></div>
   {% include research-architecture.html %}

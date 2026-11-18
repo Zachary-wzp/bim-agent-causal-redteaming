@@ -194,7 +194,7 @@ human review; the validator cannot decide whether a screenshot reveals project d
 ### Homepage research architecture (separate from platform documentation)
 
 The **01 / ARCHITECTURE** figure is in Home's independent **Research Design**
-section (`/#research-design`, after Research Workflow), outside the hero. It follows
+section (`/#research-design`, after the three research tasks), outside the hero. It follows
 the user's research design:
 User (role + question) → Coordinator Agent → role-selected ARC / STR / MEP / COST
 agents, with results returning through the coordinator to the user. It is a design

@@ -7,7 +7,7 @@ case_explorer: true
 {% include page-heading.html eyebrow="02 / CASE EXPLORER" %}
 {% assign public_cases = site.cases | where: 'published', true | where: 'approved_for_publication', true | sort: 'case_id' %}
 <p class="notice">Only representative cases are shown here. Due to the potentially harmful nature of these cases, please contact <a href="mailto:zhou-peng.wang@connect.polyu.hk?cc=xingyu.tao%40polyu.edu.hk">zhou-peng.wang@connect.polyu.hk</a> and CC xingyu.tao@polyu.edu.hk to request the full case collection.</p>
-<p class="notice">This selection includes runs with direct disclosure in the final response. Each case presents one run; repeated requests can have different outputs. Published Cases counts the displayed runs, not the full experimental dataset.</p>
+<p class="notice"><strong>Reading a case.</strong> Start with the requester's role, then compare the intended exposure with the highlighted passage in the final reply. Each published run was selected because it directly disclosed a protected fact. A repeated request can yield a different reply. See the <a href="{{ '/statistics/' | relative_url }}">pilot comparison</a> for rates and the <a href="{{ '/progress/' | relative_url }}#detector-evaluation">detector evaluation design</a> for inference across several replies.</p>
 <div data-case-explorer>
   <form class="filters" data-filters hidden role="search" aria-label="Filter case studies">
     <div class="filter-grid">

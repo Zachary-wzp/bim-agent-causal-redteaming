@@ -79,7 +79,7 @@ The homepage pairs the research title with a cropped view of the IFC building
 from the ABCDE platform screenshot. The model caption links to the full workspace
 view. Research findings and case outputs use light panels for reading.
 
-The separate `#research-design` section below Research Workflow displays the
+The separate `#research-design` section below the three research tasks displays the
 user-specified multi-agent research architecture: a user submits
 a role and question to a Coordinator Agent, which selects ARC, STR, MEP and COST
 specialists according to the user's role and combines their responses. Directional

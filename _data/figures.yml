@@ -1,5 +1,27 @@
+- id: exposure-comparison
+  title: "Figure 4b. Exposure rates compared with five baselines"
+  category: Initial Results
+  image: /assets/images/figures/exposure-comparison.png
+  pdf: /assets/images/figures/exposure-comparison.pdf
+  alt: Exposure rates for eight BIM collaboration scenarios and their macro-average, comparing Standard GA, AutoDAN-HGA, GPTFuzzer, PAIR, MAP-Elites and the proposed method. The proposed method has the highest macro-average, at 63.8 percent.
+  caption: The method reached a macro-average exposure rate of 63.8% across eight scenarios, above all five baselines.
+  scope: Initial comparison of generated cases from the proposed method and five baselines across eight BIM collaboration scenarios.
+  source_note: The macro-average is the arithmetic mean of the eight scenario rates. The highest baseline macro-average is 55.5% (MAP-Elites), a difference of 8.3 percentage points.
+  limitations: The comparison concerns macro-average performance; the proposed method does not have the highest rate in every scenario. Case counts and uncertainty estimates are not specified in this figure.
+
+- id: cell-coverage
+  title: "Figure 4c. Cell coverage compared with five baselines"
+  category: Initial Results
+  image: /assets/images/figures/cell-coverage.png
+  pdf: /assets/images/figures/cell-coverage.pdf
+  alt: Boxplots and points showing estimated prompts per cell for six methods, with 168 cells per method. The proposed method has the tightest distribution near the uniform-allocation reference line.
+  caption: The proposed method achieves more uniform cell coverage.
+  scope: Initial comparison across the proposed method and five baselines, with 168 cells per method.
+  source_note: Each point represents one cell. The vertical axis shows estimated prompts per cell; reference lines mark the scaled quota of 20 and uniform allocation of 23.59.
+  limitations: The plot reports estimated prompts per cell. The grouping behind the 168 cells and the percentage of cells meeting a success threshold are not specified in this figure.
+
 - id: task-similarity
-  title: Task similarity across BIM collaboration scenarios
+  title: "Figure 4d. Task similarity across BIM collaboration scenarios"
   category: Initial Results
   image: /assets/images/figures/task-similarity.png
   pdf: /assets/images/figures/task-similarity.pdf
@@ -8,24 +30,3 @@
   scope: Initial results for generated cases across eight BIM collaboration scenarios.
   source_note: Boxes show interquartile ranges; lines mark medians, diamonds mark means and circles mark outliers. The dashed line indicates the 0.85 threshold.
   limitations: The threshold comparison refers to scenario means; individual cases can exceed the threshold.
-
-- id: exposure-comparison
-  title: Exposure rates compared with five baselines
-  category: Initial Results
-  image: /assets/images/figures/exposure-comparison.png
-  pdf: /assets/images/figures/exposure-comparison.pdf
-  alt: Exposure rates for eight BIM collaboration scenarios and their macro-average, comparing Standard GA, AutoDAN-HGA, GPTFuzzer, PAIR, MAP-Elites and the proposed method. The proposed method has the highest macro-average, at 63.8 percent.
-  caption: The proposed method outperforms all five baselines in macro-average exposure rate, reaching 63.8% across eight scenarios.
-  scope: Initial comparison of generated cases from the proposed method and five baselines across eight BIM collaboration scenarios.
-  source_note: Exposure rates are shown as percentages. The final group reports the macro-average across the eight scenarios.
-  limitations: The comparison concerns macro-average performance; the proposed method does not have the highest rate in every scenario. Case counts and uncertainty estimates are not specified in this figure.
-
-- id: cell-coverage
-  title: Cell coverage compared with five baselines
-  category: Initial Results
-  image: /assets/images/figures/cell-coverage.png
-  pdf: /assets/images/figures/cell-coverage.pdf
-  alt: Boxplots and points showing estimated prompts per cell for six methods, with 168 cells per method. The proposed method has the tightest distribution near the uniform-allocation reference line.
-  caption: The proposed method achieves more uniform cell coverage.
-  scope: Initial comparison across the proposed method and five baselines, with 168 cells per method.
-  source_note: Each point represents one cell. The vertical axis shows estimated prompts per cell; reference lines mark the scaled quota of 20 and uniform allocation of 23.59.

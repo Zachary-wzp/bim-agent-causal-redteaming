@@ -1,10 +1,11 @@
 # Uncovering Sensitive Information Exposure Mechanisms in Agentic LLM-Assisted BIM Design Collaboration through Causal Red-Teaming
 
-Investigating sensitive information exposure mechanisms in agentic LLM-assisted BIM design collaboration through causal red-teaming.
+What can a collaborator learn from an agent that they are not authorized to learn from the building model? This project studies direct disclosures, facts that can be inferred across replies, and the interactions that might explain either outcome.
 
 **[Visit the website](https://zachary-wzp.github.io/bim-agent-causal-redteaming/)** ·
-[Explore case studies](https://zachary-wzp.github.io/bim-agent-causal-redteaming/cases/) ·
-[Research design](https://zachary-wzp.github.io/bim-agent-causal-redteaming/#research-design)
+[Three research tasks](https://zachary-wzp.github.io/bim-agent-causal-redteaming/#research-framework) ·
+[Preliminary results](https://zachary-wzp.github.io/bim-agent-causal-redteaming/statistics/) ·
+[Evaluation design and milestones](https://zachary-wzp.github.io/bim-agent-causal-redteaming/progress/#evaluation)
 
 ## Research resources
 
@@ -71,9 +72,12 @@ other five steps has not been confirmed.
 
 ## Initial results
 
-These initial experimental results have a different scope from the 16 representative
-cases displayed on the website. The displayed case count is not the experimental
-sample size.
+The Task 2 pilot generated 3,963 prompts across four BIM projects and eight
+collaboration scenarios, covering seven test strategies and two intended exposure
+types. Proposal Figure 4b compares exposure rates, Figure 4c shows prompt
+allocation across cells, and Figure 4d reports task similarity. The 16 public cases
+illustrate individual runs selected for direct disclosure. Validation of causal
+mechanisms is a subsequent research task.
 
 ### Task similarity
 
