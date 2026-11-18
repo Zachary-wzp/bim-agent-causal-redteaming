@@ -17,7 +17,7 @@ Investigating sensitive information exposure mechanisms in agentic LLM-assisted 
 
 ## Website preview
 
-[![Research website homepage with navigation, introduction and links to the case studies](docs/images/website-preview.png)](https://zachary-wzp.github.io/bim-agent-causal-redteaming/)
+[![Research homepage with the IFC building from the ABCDE workspace and links to cases and initial results](docs/images/website-preview.png)](https://zachary-wzp.github.io/bim-agent-causal-redteaming/)
 
 The website includes six sections: Home, BIM Agent, Case Studies, Statistics,
 Research Progress and Resources. Case outputs render Markdown tables and lists,

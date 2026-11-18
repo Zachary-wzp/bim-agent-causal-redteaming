@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }} home"><span class="brand-symbol" aria-hidden="true">B<span>+</span></span><span class="brand-title">{{ site.title | escape }}</span></a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }} home"><img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" width="42" height="42" alt="Stacked floor plates"><span class="brand-title">{{ site.title | escape }}</span></a>
     <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
     <nav id="primary-navigation" class="primary-nav" aria-label="Main navigation">
       {% for item in site.data.navigation %}

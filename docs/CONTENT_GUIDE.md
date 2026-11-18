@@ -381,7 +381,7 @@ setup and release instructions are in [DEVELOPMENT](DEVELOPMENT.md).
   `_data/figures.yml`, and embed them in the README with scope, sample size and
   limitations. Do not infer an overall disclosure rate from the selected cases.
 - `docs/images/website-preview.png` and `case-output-preview.png` are browser
-  captures of the public showcase, taken on 2026-10-27. Refresh them after relevant
+  captures of the public showcase. Refresh them after relevant
   presentation changes and visually check them. They are displayed only in the
   repository; `docs/` is excluded from the generated website.
 - Use relative paths for repository documents and images, and the full public

@@ -75,9 +75,9 @@ bundle exec jekyll serve --baseurl "" --host 127.0.0.1 --port 4000
 ```
 
 There is no agent service, API key, database, external font or analytics requirement.
-Home's hero presents the research title, introduction and navigation links in a
-centered text layout. It contains no case-output excerpt. The full case collection
-and the Featured Cases cards remain available below and on the Case Studies page.
+The homepage pairs the research title with a cropped view of the IFC building
+from the ABCDE platform screenshot. The model caption links to the full workspace
+view. Research findings and case outputs use light panels for reading.
 
 The separate `#research-design` section below Research Workflow displays the
 user-specified multi-agent research architecture: a user submits

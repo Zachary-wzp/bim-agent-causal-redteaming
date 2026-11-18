@@ -5,9 +5,25 @@ description: Investigating sensitive information exposure mechanisms in agentic 
 {% assign public_cases = site.cases | where: 'published', true | where: 'approved_for_publication', true %}
 {% assign updates = site.updates | where: 'published', true | sort: 'snapshot_date' | reverse %}
 <section class="hero">
-  <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> BIM × CAUSAL RED-TEAMING</p><h1>{{ site.title | escape }}</h1><p class="hero-subtitle">Sensitive information exposure<br>in agentic design collaboration.</p><p class="hero-description">A research project using causal red-teaming to investigate how sensitive information can cross role-based access boundaries in LLM-assisted BIM workflows.</p><div class="actions"><a class="button" href="{{ '/cases/' | relative_url }}">Explore case studies <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/platform/' | relative_url }}">Meet ABCDE Platform <span aria-hidden="true">→</span></a></div></div>
+  <div class="hero-copy">
+    <p class="eyebrow">BIM research / Causal red-teaming</p>
+    <h1>{{ site.title | escape }}</h1>
+    <p class="hero-description">How can a BIM agent reveal information beyond a collaborator’s role? Explore the prompts, model responses and results from the study.</p>
+    <div class="actions">
+      <a class="button" href="{{ '/cases/' | relative_url }}">Explore case studies <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="{{ '/statistics/' | relative_url }}">View initial results <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <figure class="model-sheet">
+    <div class="model-sheet-title"><span>Architectural model</span><span>IFC</span></div>
+    <div class="model-frame">
+      <img src="{{ '/assets/images/platform/abcde-overview.png' | relative_url }}" alt="Stepped multi-storey IFC building in the ABCDE model viewer" width="1747" height="900" fetchpriority="high">
+      <div class="model-datums" aria-hidden="true"><span>Roof</span><span>Base</span></div>
+    </div>
+    <figcaption><a href="{{ '/platform/' | relative_url }}">Explore the ABCDE workspace <span aria-hidden="true">↗</span></a></figcaption>
+  </figure>
 </section>
-<div class="research-strip"><span><span class="status-dot"></span> Role-aware evaluation</span><span>Evidence-based reporting</span><a href="{{ '/cases/' | relative_url }}"><strong>{{ public_cases.size }}</strong> Published Cases <span aria-hidden="true">↗</span></a></div>
+<div class="research-strip"><a href="{{ '/cases/' | relative_url }}"><strong>{{ public_cases.size }}</strong> Published Cases <span aria-hidden="true">↗</span></a><a href="#research-design">Research design <span aria-hidden="true">↓</span></a><a href="{{ '/progress/' | relative_url }}">Project progress <span aria-hidden="true">↗</span></a></div>
 <section class="section overview"><div><p class="eyebrow">RESEARCH OVERVIEW</p><h2>Shared models.<br> Different permissions.</h2></div><div class="overview-copy"><p>Building Information Modeling brings project information into a shared environment. Collaboration involves multiple roles, each with a different need for—and authorization to access—that information.</p><p>This project aims to uncover sensitive information exposure mechanisms through causal red-teaming: how adversarial requests relate to role permissions, what the agent actually returns, and how those outputs are evaluated for information exposure.</p><p class="small">Attack intent and observed exposure are reported separately. Case outcomes reflect the evaluated final response.</p></div></section>
 <section class="section"><div class="section-heading"><div><p class="eyebrow">RESEARCH WORKFLOW</p><h2>From requests to evidence</h2></div><span class="small">Method overview · not a report of completed experiments</span></div><ol class="workflow"><li><span>01</span><strong>BIM / Project Data</strong><small>Roles & permissions</small></li><li><span>02</span><strong>BIM Agent</strong><small>System under evaluation</small></li><li><span>03</span><strong>Adversarial Cases</strong><small>Intended exposure</small></li><li><span>04</span><strong>Agent Outputs</strong><small>Recorded responses</small></li><li><span>05</span><strong>Leakage Evaluation</strong><small>Observed outcomes</small></li></ol></section>
 <section class="section research-design" id="research-design" aria-labelledby="research-design-title">
